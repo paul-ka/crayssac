@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <link rel="shortcut icon" href="img/ico.ico">
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="./css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title></title>
+</head>
+<body>
+  <!-- Icone de tête -->
+  <div class="bbleu2 bleu2">
+    <div class="chip">
+      <a href="./index.html"><img src="./img/ico-home.png" alt="Informatique">
+      Accueil</a>
+    </div>
+    <div class="chip">
+      <a href="./informatique.html"><img src="./img/ico-computer.png" alt="Informatique">
+      Informatique</a>
+    </div>
+    <div class="chip">
+      <a href="./calligraphie.html"><img src="./img/ico-calli.png" alt="Calligraphie">
+      Calligraphie</a>
+    </div>
+    <div class="chip">
+      <a href="./nature.html"><img src="./img/ico-nature.png" alt="Nature">
+      Nature</a>
+    </div>
+    <div class="chip">
+      <a href="./aboutme.html"><img src="./img/ico-about-me.png" alt="Qui suis-je">
+      Qui suis-je</a>
+    </div>
+  </div>
+  <!-- Fin icone de tête -->
+  <div class="row">
+    <div class="col s12">
+      <h1 class="bbleu3">Informatique</h1>
+      <p>J'ai pratiqué trois facettes de l'informatique : <br />
+         => l'informatique au service des automatismes<br />
+         => La gestion de parc informatique<br />
+         => Le développement web et mobile<br />
+        Je vous propose quelques réflexions pouvant aider à une meilleur utilisation de cet outil.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+
+      <ul class="collapsible popout" data-collapsible="accordion">
+         <li>
+    <!-- Développement web -->
+           <div class="collapsible-header"><i class="material-icons">play_arrow</i>Développement web</div>
+           <div class="collapsible-body">
+            <h2>Comment fonctionne internet?</h2>
+            <p>C'est un système de demande et de réponse suivant un langage particulier. Ce langage s'appelle un protocole. Les protocoles les plus courants sont :<br />
+
+            - http pour l'affichage de pages web.<br />
+            - ftp pour le téléchargement de fichiers<br />
+            - pop et smtp pour la messagerie</p>
+
+            <p>Voici les principales solutions techniques pour créer un site</p>
+            <h2>Le Blog</h2>
+            <p>C'est la soution la plus simple mais aussi la plus limitée.<br />
+            Le programme de blog le plus répendu est Wordpress. Il a beaucoup évollé ces dernières années et est devenu un véritable CMS avec de nombreux templates (= des modules de personalisation).</p>
+            <h5>Avantages</h5>
+            <p>- Elle ne nécessite pas de connaissance informatique. Un éditeur en ligne permet de saisir les pages et les transtorme directement en html.<br />
+            - Elle ne nécessite pas de logiciel<br />
+            - L'hébergement est souvent gratuit et sans pub<br />
+            - Certaines fonctions sont crées en automatique comme la table des articles</p>
+            <h5>Inconvénient</h5>
+            <p>- Les textes s'empilent à la queux leu leu. Il n'y a pas de possibilité de créer de structure</p>
+            <h2>Les CMS</h2>
+            <p>Il existe des sites entièrement paramétrables et utilisables. Cela va du plus simple comme CMSimple au plus complexe comme Typo3. Cela met a disposition des fonctions puissantes sans necessiter les connaissances correspondantes. Souvent ces sites proposent des skins ou des templates c'est à dire une personnalisation de l'apparence et des plugins c'est à dire des outils compléméntaires.<br />
+            Ces sites necessitent généralement le langage PHP. Pour le tester en local sur son ordinateur, il faut installer un serveur php. Il existe easyPHP et WAMP pour windows et LAMP pour Linux. Une fois que le site est pret en local, il suffit de le télécharger sur le site définitif.</p>
+            <h3>J'ai testé CMSimple</h3>
+            <p>Par défaut, il gère les articles : la mise en ligne, la table des matière et les skins.
+            Il est possible de lui rajouter un plugin pour avoir livre d'or, forum, envoi de mail.
+            Il necessite uniquement php sans base de données.</p>
+            <h3>J'ai testé Guppy</h3>
+            <p>Il a toutes les fonctionnalités necessaires à un portail informatique (agenda, news, forum, téléchargement...)
+            Il est possible de lui rajouter des plugins pour avoir par exemple, la fonction carte postale.
+            Il necessite uniquement php.</p>
+            <h3>J'ai testé Phortail</h3>
+            <p>Il a toutes les fonctionnalités necessaires à un portail informatique (agenda, news, forum, téléchargement...)
+            C'est un intermédiaire entre CMSimple et Guppy.
+            Il nécessite uniquement php lui aussi.</p>
+            <h3>J'ai testé Joomla</h3>
+            <p>Il nécessite Php et une base de donné MySQL. Il est très complet et évolutif grace à des extensions.Elle bénéficie aussi d'une communauté francophone très active.</p>
+            <h3>J'ai testé Typo3</h3>
+            <p>Il nécessite Php et une base de donné MySQL. Il est très complet mais aussi très lourd.</p>
+            <h5>Avantages des CMS</h5>
+
+                <p>Elle nécessite peu de connaissance informatique. <br />
+                Comme pour le blog un éditeur en ligne permet de saisir les pages et les transtorme directement en html.<br />
+                Toute la gestion passe par des formulaires <br />
+                C'est un très bon outil collaboratif. Une fois que les règles et mots de passe sont transmis beaucoup de rédacteurs peuvent travailler ensembles.</p>
+
+            <h5>Inconvénient</h5>
+
+                <p>Peu de pages personnelles mises à disposition par les providers supportent le langage php. 
+                Il faut parfois en plus la base de données MySQL. <br />
+                Elle nécessite un logiciel de client ftp pour le premier chargement. J'utilise Filezilla qui est OpenSource</p>
+
+            <h2>Hebergeur avec CMS intégré</h2>
+            <h3>J'ai testé JIMDO</h3>
+                <p>C'est un hébergeur gratuit (avec leur pub dans un coin et 500Mo) ou payant (sans pub et 5Go).
+                Tous est réalisable par le navigateur internet. Il n'y a pas besoin d'autre logiciel.<br />
+                Tout est géré par 3 icônes :<br />
+                + : pour ajouter un objet (page dans le menu ou titre, texte, images, gallerie, formulaire... dans les pages).<br />
+                flèches : pour déplacer l'objet en cours<br />
+                poubelle : pour supprimer l'objet en cours<br />
+                Ca ne peut pas être plus simple !....</p>
+            <h5>Avantages</h5>
+
+                <p>Elle nécessite pas de connaissance informatique. C'est comme un blog amélioré. On définie l'arboressence des pages<br />
+                l'hebergement est inclu dans le service<br />
+                Il ne nécessite pas de logiciel<br />
+                C'est un très bon outil collaboratif. Une fois que les règles et mots de passe sont transmis beaucoup de rédacteurs peuvent travailler ensembles.</p>
+
+            <h5>Inconvénient</h5>
+
+                <p>Comme tous CMS, la mise en page est prédéfinie. Cette limitation est peu pénalisante vu le panel des mise en pages proposées</p>
+
+            <h2>Les sites "classiques"</h2>
+
+            <p>C'est le premier dans l'apparition chronologique mais le dernier en simplicité de mise en oeuvre. cette méthode necessite la connaissance du langage de programation mais est parfois la seule possible. Pour créer les pages, il exite des logiciels qui permetent de s'affranchir des syntaxes mais si le résultat n'est pas satisfaisant, il faut savoir lire "les balises".</p>
+
+            <p>Un technologie permet de séparer ce qui est texte et ce qui est mis en page : c'est le CSS (les feuilles de style en cascade) On attribue des mise en forme de texte en fonction de la class. Ca simplifie le code et donne une homogénéité au document.</p>
+
+            <p>On peut rendre les pages plus dynamiques grace à des langages de programmation. Les plus connus sont Javascript qui s'exécute dans le navigateur de l'utilisateur et PHP qui s'exécute sur le serveur et renvoi le résultat sur le navigateur de l'utilisateur.</p>
+
+            <p>Pour finir, on feut utiliser des Frameworks. Ce sont des scripts qui facilitent la programmation. Vous avez peut-être entendu parler de <a href="http://getbootstrap.com/">Bootstap</a> qui facilite la mise en page et aide à faire un site responsive, c'est à dire qui s'adapte aux ordinateurs, tablette ou smartphone. 
+            <a href="https://jquery.com/">JQuery</a> simplifie la programmation Javascript pour des sites dynamiques.<br />
+            Pour ce site, j'ai utilisé <a href="http://materializecss.com/">Materialize</a>. Il m'a permi d'intéger facilement du dynamisme dans les pages.</p>
+
+            <h5>Avantages</h5>
+
+                <p>Elle permet de réaliser exactement les pages désirées quelque soit la technologie du serveur web.</p>
+
+            <h5>Inconvénient</h5>
+
+                <p>Oblige à connaitre le langage de programmation<br >
+                Il faut tout créer à partir de rien.<br >
+                Le travail collaboratif est très difficile<br >
+                Elle nécessite un logiciel de client ftp pour chaque chargement.</p>
+
+            <p>Si vous optez pour cette solution, je vous invite à suivre des cours HTML mais aussi CSS (par exemple sur <a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3">OpenClassRoom</a>)</p>
+          </div>
+         </li>
+         <li>
+    <!-- Les licences -->
+           <div class="collapsible-header"><i class="material-icons">play_arrow</i>Les licences</div>
+           <div class="collapsible-body">
+            <p>
+              Il existe une multitude de logiciels qui premettent de réaliser divers tâches mais lesquels choisir.
+            </p>
+            <h2>Logiciels sous licence propriétaire</h2>
+            <p>Il faut payer pour pouvoir les utiliser ces logiciels. Le traitement de texte Word ou le logiciel de retouche d'image Photoshop font parti de cette catégorie.<br/>
+            Le prix des logiciels à utiliser peut dépasser le prix de l'ordinateur.<br />
+            On trouve parfois sur le net des versions craquées. Attention : On n'est jamais sûr qu'elle ne contiennent pas de virus... J'en déconseille donc l'usage.</p>
+
+            <h2>Shareware</h2>
+            <p>Ces logiciels sont aussi à acheter mais il existe une version d'essai qui est souvent limité dans le temps ou dans les performances. Winzip et Winrar sont des logiciels de compression de fichier qui font parti de cette catégorie.</p>
+
+            <h2>Freeware</h2>
+            <p>Se sont des logiciel gratuit pour un usage non-professionnel. Le développeur du logiciel reste propriétaire de son travail mais il le met gratuitement à la disposition des utilisateurs. On a par exemple dans cette catégorie le viualiseur d'image <a href="http://www.irfanview.com/">Irfanview</a>.<br />
+            Ces logiciels sont généralement développés par une personne ou une équipe de passionné. Il y a un risque que le logiciel soit abandonné.</p>
+
+            <h2>Les logiciels OpenSource</h2>
+            <p>Se sont des logiciels gratuits et dont les sources (c'est à dire les fichiers qui ont permi de créer le logiciel) sont accessibles et utilisables. On peut les utiliser pour un usage professionnel. Le développement est porté par des communautés : Il est probable qu'ils durent dans le temps.<br />
+            On trouve par exemple, sous cette licence, la suite bureautique <a href="https://fr.libreoffice.org/">LibreOffice</a> ou le logiciel de 3D <a href="https://www.blender.org/">Blender</a> qui a été utilisé pour la réalisation de dessins animés.<br />
+            J'encourage d'utiliser des logiciels OpenSource.</p>
+           </div>
+         </li>
+         <li>
+    <!-- Sécurité informatique -->
+           <div class="collapsible-header"><i class="material-icons">play_arrow</i>Sécurité informatique</div>
+           <div class="collapsible-body">
+            <h2>Que faut-il protéger ?</h2>
+              <p>On voit clairement le besoin de verrou sur les portes pour protéger ses biens matériels. La sécurité informatique a la même fonction : ne pas perdre ses données aussi bien financière que intimes.</p>
+
+              <h2>1° règle : faire des sauvegardes.</h2>
+              <p>La sécurité doit protéger de la défaillance matériel. Combien de personnes pleurent la perte des photos de famille ou du carnet d'adresse parce que l'ordinateur est mort. Il faut toujours avoir ses fichiers sur au moins deux supports distincts. Un disque externe suffit parfois pour sécuriser ses données. Cela demande une rigeur en fonction de la sécurisation désiré. En entreprise, une sauvegarde hebdomadaire est un minimum.<br />
+              Certain logiciels permettent de faciliter cette tâche. J'utilise un logiciel OpenSource très abouti : <a href="http://synkron.sourceforge.net/">synkron</a> </p> 
+              <h2>Réfléchir et cliquer ensuite, pas l'inverse</h2>
+              <p>C'est le slogan de Korben (un blogueur sur la culture geek). Internet est une jungle. Un peu de bon sens et d'observation évite des déconvenu. <br/>
+              Par exemple : vous vous inscrivez sur un forum. On vous demande votre adresse mail et de choisir un mot de passe. Allez-vous vous utiliser le même mot de passe que celui de la messagerie ? Si oui, vous donner au propriétaire du forum l'accès à votre messagerie. <br />
+              Les sites de piratage et de pornographie sont, très souvent, de véritable nids d'infection. Si vous les consultez, sachez que vous jouez avec le feu !...</p>
+              <h2>S'informer/se former</h2>
+              <p>Agence nationale de la sécurité des systèmes d'information (l'ANSSI) a publié <a href="http://www.ssi.gouv.fr/uploads/2015/03/guide_cgpme_bonnes_pratiques.pdf">un recueil des bonnes pratiques</a> </p>
+           </div>
+         </li>
+         <li>
+        </ul>
+
+
+  </div>
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.collapsible').collapsible({
+          accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+      });
+  </script>
+</body>
+</html>

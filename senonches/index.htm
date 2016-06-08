@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+
+	
+<head>
+	<meta charset="utf-8">
+	<title>Senonches en poche</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			margin: 0px}
+		header{
+			background: #aee0d7;
+			font-size:1.4em;
+			font-weight: bold;
+		 }
+		#container{
+			width: 100%;
+			height: 100%;
+			background: #bff6ec;
+		}
+		section {
+			position : absolute;
+			padding-right: 5px;
+			padding-left: 5px;
+			overflow: auto;
+			background: #ffffff;
+			display : none;
+			top: 90px;
+			width: 98%;
+			height:100%;
+		}
+		section:target{display:block;}
+		h1{
+			background: #bff6ec;
+			font-size:1.3em;
+			font-weight: bold;		
+		}
+		h2{
+			background: #e3fffa;
+			font-size:1.2em;
+		}		
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<header><a href="#a0"><img src="data:image/gif;base64,R0lGODlhUABRAKUAAP///8zMzGZmMzMzM/8AAJmZmWZmZgAAAJmZZsyZAP/MMzMzAAAzM8xmAMzMmf/MADNmM8wAAMwzM5lmADNmZsyZM2YzM/+ZM5lmZmaZZv//zMz//8zMAMyZmf//M8yZZpnMzP/MzMzMZszMM8xmM5lmM//MZpkAAGaZmf8zAMxmZpmZM5kzM//Mmf8zM5nMmZkzAGbMzDNmADMAAAAzAP///////////////////////////////////////////yH5BAEKAD8ALAAAAABQAFEAAAb+QIBwSCwaj8ikcslsOp/QqHRa1FSECY1DRO16hxrTyJEYmR4aQELBJie+cOZWqFE82HihIsFfXwF7cYJEChxpgHhsbwBkewkTQo0BHw6DXi0KI3aHDnuKfaB8lWQTfQABllEaIhVsHApCrZ+fCRWlDQ18CGt9HxOoqU0BIxx3D3wTeBy8pX3Ja819DXsVCZXBTZ2e1H2ex457363IzRO22FAm24594wrVjwqlFfTRFR/A6E4Be8XvoLhIkMDVYIJBZ+Os6ZOijlcFXBcuNJBokOBEgrZswVqoSsHEBBLXFHtAsmTJBBZJwCjBUUrEC3Y4cPDg4U6oBCZJJhDIEkr+vigBEBQpQLTIBwU0l/GJaLEprjU6jQQwIMDAz1MDBgiVIgDBVgBVuxpR9PICviGdIn1ASTDBVSELBMhFAGwqgwECpGyYK0QABa3XiHyIaKfmISEiNgZwQFKBxAZvAQxgsACBXCEGFtwVEFmJZa8AClCIy9lIrqQeOBRJPCQAzsYdkGRmIDcDqgKTIQgo8MQrBKoOAgjACxrJ2gceRqzeeArBsZ5JDGwWIENyVrx5hXm13NWAAa8rOhst0mpKAc1ZIUwdoLt0kwJdP+/t+nODksNE8nV+W4DB9P54iWdEAVQhsEBQwYFgAG9SAANCawIOZUBWeQ3wHRQIECfABgH+TMUXEpGh0mGHRexHBFW2nQdWAFlRJYwAEHwGgHdaCSVecFKNWASOR+QzAGlCcSYdhRH29R1dosVHYkuMCDHZABnIhUpWlMX44oVUfcikELehJ1dVT8bFRD5dwRdfjiOm2SELEbTpZgRqLqkEbgv8KBeVMGbn2VbCHflVfgMM0cGCQxQQAQGIIhqoEBgQKgRvb41YZ3qT6sbEXuH15VVdBehXwAFEWXDAAR1mFUCiBAwKqgGiksriAHLmF9pwm7VIQQAMIgEfaA4gEFglInI54QFOkjrqgi4kuh6xAIza7AED5NraKQxa8CMKFAjJAARKCFCZUH/epiO10PI2AKj+n8J6KKJTlfssgdBeJWKsoUUr3V3SFqGgWH+eUheX5x476sDqKhvwAQYMPCqsJaJi41yoaEscEtuJJQxuCitcMLsJZ0xwiCNOGCOuuE2HRHz0PaqnVPBmpXGg6xKA67kHL2xAEiRed9l1eNVJQb5zIRnAAheCGNqCHU9oFQAx3+Zd0hYWeV568PGclZhEDGdZcJ8FNu0pXEq28JJNc8nisUUCfJduAfhHAQR1WjzEl58VSASPYQ+h8G1MK9va3rg2MRteM1p9GREIZOtVZsX5W2IBHQTQKMITBmBBAE1j0Onk3llQwOUNv3UdWAb8VdtVBEaLmwAoBGV2iRhYYMH+gu7Cirmysc+ebqe29zgUyVR592W+XFZFFQgf0hss7d4V1Te7JDK/IPFJaJXdAgeCrUSvDtDI51UYcMl7tGT7TS1u0YYGQORSEdGfbrw5/x4A2PvqeBEnqOC+EWXv35rMvhvCAGggpcDt6TarE8A16HUCAkjggRCMoARQJcEKsgtNQxjSbgxIoKW1Rkno25S/rhIzVJnwhChEFX86VajJ7IaFr/KPtOJDly99rQglTKEOU/gWBBQFGCUDAV3WQ6FcTUVxQ6OL+sY1hBzu8InmK4ISAzSrGc3MTnIDS7Y4o0AAIM9GJISiGFFltAQCgypto40NEScANQLDQl0kYQT+loCq2CSBBQAsEWZykx0MWAg7ELCNEcKipwLZCIcMs5yFBLiBOi4KAH7MlQEkEKk9urFeu0EazoTjMDjiSE7tWlCrcIWwUyVqULD6nLM+5Sg9nmI6EbsZFPLiIV/JD2DnKlYAFlYAVGkul7skFi9lJT9rUXFlTijABkQTFyJpr11ZeVfCBtDIU7ISFaOC5lBmtRsAbIBCVpyCkO5Exbp4TGOmRFQICFazeO2PQtmZEF0eGQUExAAvpYvLC56JsXOSClUhGJY/f8KbCVWGQTfzoDit6C371cU70KrZIgEKUZcRTJbTmtDEZuSiKFCFN4mzCnbyJqKnjQo3LATo0Wj+B6qobZNFDLCMECwDRNx4xzMUoEqgZBqXBZI0mNAiQgrM1yGCGW1GauwLg9DHsxAZLkqcvOHfBtYp3gz1glxSWFVdObQFPChxe3ySWHuEsp5k6ZmF8pznENbBGaRTZqz6HCvlagQ7YqVeVqmat77UzSNsx2tSyqucChC73RlQhY1qlGGZ+MwAUCADGH1UloYHosWUyIeQYtHhWJQwArEQACockYVWBYAtPipOEzrZl9JWhI+G7Du4KpO7UKECVM2RWpxtm7d+8zatCKuvqRBOVQCQIexQSIlDwMAJTzCg9uQJn6hAAWdYOwVZssh0cbsMUYhigAYSIAKek4pz4RnksenqY0nCNW5cqBeCEoRAV+zJAATYc7jQ0AsbIlrAaIYzUqDAzVtxQe790FEAy1SVVjpdgNeeUGADRUmq6JhLV4y3Vw9RIUhV6dR9g/GqJ8llA8KzinvMxlgjICBKXbTPlvQLgfleh0Yo8uGYAhcUzliGQvONbITlMqkFIM4yCl2CcOVkoEkt8rx1mhQycdUnYaBRioF0Lkf2uoB8Cbdy76lNvrA4XI4Qz0weLHH7NPCZr5hpOETb0qxoCoepZAC5RNngliZMXSesVs2tIRx+fYvnelFPEPVVM26m3OcBo6POSggCADs=">Senonches en Poche</a><br></header>
+		<h1><a href="#a1">Administration</a></h1>
+		<h1><a href="#a2">Infos pratique</a></h1>
+		<h1><a href="#a3">solidarite - action sociale</a></h1>
+		<h1><a href="#a4">Petite enfance-vie scolaire</a></h1>
+		<h1><a href="#a5">Vie culturelle, tourisme</a></h1>
+		<h1><a href="#a6">Sport et loisirs</a></h1>
+		<h1><a href="#a7">Associations</a></h1>
+		<h1><a href="#a8">Urgence</a></h1>
+		<h1><a href="#a9">Santé</a></h1>
+			<section id="a0">
+				<h1><a href="#a1">Administration</a></h1>
+				<h1><a href="#a2">Infos pratique</a></h1>
+				<h1><a href="#a3">solidarite - action sociale</a></h1>
+				<h1><a href="#a4">Petite enfance-vie scolaire</a></h1>
+				<h1><a href="#a5">Vie culturelle, tourisme</a></h1>
+				<h1><a href="#a6">Sport et loisirs</a></h1>
+				<h1><a href="#a7">Associations</a></h1>
+				<h1><a href="#a8">Urgence</a></h1>
+				<h1><a href="#a9">Santé</a></h1>
+			</section>
+			<section id="a1">
+				<p>Administration></p>
+				<h1><a href="#a11">La Mairie de Senonches</a></h1>
+				2, rue de Verdun 28250 Senonches<br>
+				Tel : <a href="tel:0033237377676">02.37.37.76.76</a> / Fax 02.37.37.92.92<br>
+				Mail : <a href="mailto:mairie@ville-senonches.fr">mairie@ville-senonches.fr</a><br>
+				<a href="http://www.senonches.fr">www.senonches.fr </a><br>
+				Ouverture au public :Du lundi au vendredi de 9h à 12h et de 14h à 18h(17h le vendredi)
+				<h1><a href="#a12">La Communauté de Communes du Perche senonchois</a></h1>
+				2, rue de Verdun (au-dessus de la médiathèque) 28250 Senonches<br>
+				Tel : <a href="tel:0033237373728">02.37.37.37.28</a> / Fax 02.37.37.37.33<br>
+				Ouverture au public :Du lundi au vendredi de 9h à 12h et de 14h à 18h(17h le vendredi)</p>
+
+			</section>
+			<section id="a11">
+				<p><a href="#a1">Administration</a>>mairie></p>
+				<h1>La Mairie de Senonches</h1>
+					<p>Les locaux de la Mairie de Senonches regroupent : les bureaux et services de la ville de Senonches, ceux de la communauté de communes du Perche senonchois, la médiathègue, l'école de musigue, le relais emploi ainsi gue des bureaux disponibles pour les permanences (CARSAT, Mission Locale pour l'emploi).<br>
+					
+				<h2><a href="#a111">LE CONSEIL MUNICIPAL</a></h2>
+					<p>Les séances du conseil municipal sont accessibles à tous. La convocation et le compte-rendu sont affichés sur le panneau d'informations à l'entrée de la cour de la Mairie. Il est également disponible sur le site <a href="http://www.senonches.com">www.senonches.com</a> à la rubrique « délibérations municipales »</p>
+				<h2><a href="#a112">LES SERVICES</a></h2>
+
+				<h1>La Communauté de Communes du Perche senonchois</h1>
+					<p>2, rue de Verdun (au-dessus de la médiathèque) 28250 Senonches tél : <a href="tel:0033237373728">02.37.37.37.28</a> / Fax 02.37.37.37.33</p>
+					<p>Ouverture au public :Du lundi au vendredi de 9h à 12h et de 14h à 18h(17h le vendredi)</p>
+
+			</section>
+			<section id="a111">
+				<p><a href="#a1">Administration</a>><a href="#a11">mairie</a>>le conseil municipal></p>
+				<h1>LE CONSEIL MUNICIPAL</h1>
+					<strong>Maire : Xavier NICOLAS</strong>
+					Permanence (Maire ou adjoint) : le vendredi de 10h30à 12h<br>
+					<strong>Adjoints</strong><br>
+					<strong>Janine DUTTON</strong> : enfance, jeunesse, social, scolaire, affaires générales.<br>
+					<strong>Eric GOURLOO</strong> : urbanisme, assainissement collectif, investissement gros travaux, services techniques.<br>
+					<strong>Liliane YVEN</strong> : finances, budgets, gestion du personnel.<br>
+					<strong>Jacques DESMONTS</strong> : bâtiments et établissements publics, éclairage public, énergie (contrôle de distribution d'électricité et gaz, extension gaz, achat d'énergie).<br>
+					<strong>Elisabeth STANDAERT</strong> : relation tissu associatif et commerces, économie.<br>
+					<strong>Michel DESHAYES</strong> : environnement, forêt, espaces verîs (ESAT)<br>
+					<strong>Conseillers municipaux</strong> <br>
+					Pascal BIROLLEAU, Elodie BOSSENNEC, Valérie CHANTOISEAU, Christelle COLAS, Françoise DESPAS, Jean-Pierre FOURNIER, Laurence LAGANE, Paula MANCEL, Philippe MARTOJA, Michel MERCIER, Aurélien MOREAU, Marie-Agnès RUEL, Jean-Pierre SOUHY, Marie-Thérèse VERCHEL, Jacky VIGNERON
+			</section>
+			<section id="a112">
+				<p><a href="#a1">Administration</a>><a href="#a11">mairie</a>>les services></p>
+				<h1>LES SERVICES</h1>
+					<strong>Directeur Général des Services</strong> : Laure JEANNE - Tel : <a href="tel:0033237377676">02.37.37.76.76</a> e-mail : l.jeanne@viile-senonches.fr
+					<strong>Secrétariat, Mariage, Naissance, Décès, Cimetière</strong> : Nelly DESSE - Tel : <a href="tel:0033237377676">02.37.37.76.76</a> e-mail : n.desse@ville-senonches.fr
+					<strong>Action Sociale</strong> : Tel : <a href="tel:0033237373724">02.37.37.37.24</a> e-mail : ccas@ville-senonches.fr
+					<strong>Cantine, Inscriptions scolaires</strong> : Florence ROCTON - Tel : <a href="tel:0033237373724">02.37.37.37.24</a> e-mail : f.rocton@ville-senonches.fr
+					<strong>Urbanisme, PLUI</strong> : Martine AUFFRET - Tel ; <a href="tel:0033237373726">02.37.37.37.26</a> e-mail : m.auffret@ville-senonches.fr
+					<strong>Comptabilité, Elections</strong> : Claudine MEUNIER - Tel : <a href="tel:0033237373723">02.37.37.37.23</a> e-mail : c.meunier@ville-senonches.fr
+					<strong>Accueil, Etat Civil, logement HLM, locations salles</strong> : Corinne VIROULAUD - Tel : <a href="tel:0033237373727">02.37.37.37.27</a> e-mail : c.cluzeau@ville-senonches.fr
+					<strong>SIRPTS (transports scolaires), Urbanisme</strong> : Jimmy DROUIN - Tel : <a href="tel:0033237373722">02.37.37.37.22</a> e-mail: j.drouin@ville-senonches.fr
+					<strong>Château-musée, tourisme</strong> : Nadia DESILLES - Tel : <a href="tel:0033237377676">02.37.37.76.76</a> e-mail : n.desilles@ville-senonches.fr
+
+			</section>
+			<section id="a12">
+				<p><a href="#a1">Administration</a>>La Communauté de Communes></p>
+				<h1>La Communauté de Communes du Perche senonchois</h1>
+					<h2>Président : Xavier NICOLAS</h2>
+					<h2>Vice-présidents :</h2>
+					Patrick LAFAVE - Maire de La Framboisière -(commission jeunesse et sports) <br>
+					Marie-Christine LOYER - Maire de Louvilliers-lès-Perche (commission Développement économique)<br>
+					Nicole LAHOUATI - Maire de Le Mesnil Thomas (commission Culture, tourisme, aménagement du territoire)<br>
+					Jacques BASTON - Maire de La Saucelle (commission Environnement)<br>
+					Christelle LORIN - Maire de Digny (commission Comptabilité et ressources humaines)
+					<h2>Directeur Générai des Services</h2>
+					Laure JEANNE - Tel: <a href="tel:0033237377676">02.37.37.76.76</a> mail: l.jeanne@ville-senonches.fr
+					<h2>Secrétariat</h2>
+					Affaires culturelles, touristiques, jeunesse et sports (gymnase), aménagement du territoire, maison pluridisciplinaire de santé, assainissement non collectif (SPANC), urbanisme (PLUi, accessibilité) et déploiement Internet Haut Débit. Mathieu BOUFFARD Mail : m.bouffard@ville-senonches.fr <br> 
+					Relais emploi, développement économique Amélie BLANCHET
+					a.blanchet@ville-senonches.fr <br>
+			</section>		
+			<section id="a2">
+				<p>Infos pratiques></p>
+				<h1><a href="#a21">Environnement, cadre de vie</a></h1>
+				<h1><a href="#a22">Gendarmerie</a></h1>
+				<h1><a href="#a23">Vie quotidienne</a></h1>
+				<h1><a href="#a24">Urbanisme</a></h1>
+				<h1><a href="#a25">Logement</a></h1>
+				<h1><a href="#a26">Démarches administrative</a></h1>
+			</section>
+			<section id="a21">
+				<p><a href="#a2">Infos pratiques</a>>Environnement - Cadre de vie></p>
+				<h1>Pays du Perche d'Eure et Loir</h1>
+					Syndicat intercommunal pour l'aménagement et le Développement du Perche (SIAP)<br>
+					1 B rue Doullay 28400 NOGENT LE ROTROU Tel : <a href="tel:0033237290929">02.37.29.09.29</a><br>
+					paysperche.siap@wanadoo.fr<br>
+					<a href="http://www.vivre-dans-le-perche.fr">www.vivre-dans-le-perche.fr</a><br>			
+				<h1><a href="#a211">Parc naturel du Perche</a></h1>
+				<h1><a href="#a212">Eau et assainissement</a></h1>
+				<h1><a href="#a213">Déchetterie</a></h1>
+			</section>
+			<section id="a211">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a21">Environnement - Cadre de vie</a>></p>
+				<h1>PARC NATUREL DU PERCHE</h1>
+				Maison du Parc, Manoir de Courboyer 61340 Noce Tel : <a href="tel:0033233853636">02.33.85.36.36</a><br>
+				Courriel : secretariat@parc-naturel-perche.fr<br>
+				Site internet : <a href="http://www.parc-naturel-perche.fr">www.parc-naturel-perche.fr</a><br>
+				Le Parc naturel régional du Perche est né en 1998 de la volonté des habitants de préserver leur environnement et leur cadre de vie pour en faire des atouts de développement durable. Le Parc est au service des 126 communes de son périmètre pour les aider à établir leurs documents d'urbanisme, leur apporter des conseils et une ingénierie de qualité. Les habitants y trouvent également aide et conseils pour restaurer les mares, s'informer sur l'entretien des haies, restaurer ou construire leur maison, consommer local et bien sûr découvrir le Perche.<br>
+			</section>
+			<section id="a212">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a21">Environnement - Cadre de vie</a>></p>
+				<h1>EAU ET ASSAINISSEMENT</h1>
+				Assainissement non collectif (fosse septique): communauté de communes Matthieu BOUFFARD :  <a href="tel:0033237373728">02 37 37 37 28 </a><br>
+				Assainissement collectif (tout-à-l'égout) : Martine AUFFRET : <a href="tel:0033237373726">02 37 37 37 26</a>
+			</section>
+			<section id="a213">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a21">Environnement - Cadre de vie</a>></p>
+				<h1>DÉCHETTERIE</h1>
+				Elle se situe à Senonches, rue de la Croix Sainte-Anne (près des châteaux d'eau sur la route de Châteauneuf en Thymerais). Le dépôt est gratuit pour les particuliers de la Communauté de Communes du Perche Senonchois jusqu'à 2m3 de déchets verts par jour.<br>
+				Pour accéder à la déchetterie, un badge est désormais obligatoire. Il vous sera remis gratuitement sur présentation d'un justificatif de domicile de moins de 3 mois. Ce badge vous permet également d'accéder aux déchetteries de Saint Eliph et de Courville-sur-Eure. 
+				<h2>Horaires d'ouverture :</h2>
+				Fermée les lundis, jeudis et jours fériés ainsi que le dimanche et le mardi en hiver. <br>
+				<strong>HIVER :</strong>
+				du 1er novembre au 28 février <br>
+				Mercredi de 13h30à17h30 <br>
+				Vendredi de 9h00 à 12h30 - 13h30 à 17h30 <br>
+				Samedi de 9h00 à 12h30 - de 13h30 à 17h30<br>
+				<strong>ETE :</strong>
+				du 1er mars au 31 octobre<br>
+				Mardi de 13h30à 18h30<br>
+				Mercredi de I3h30à 18h30<br>
+				Vendredi de 9h00 à 12h30 - de 13h30 à 18h30<br>
+				Samedi de 9h00 à 12h30 - de 13h30 à 18h30<br>
+				Dimanche de 9h00 à 12h00
+				<h2>Ramassage des encombrants</h2>
+				En avril et octobre.
+				Se renseigner à la mairie au <a href="tel:0033237373727">02.37.37.37.27</a>
+			</section>
+			<section id="a22">
+				<p><a href="#a2">Infos pratiques</a>></p>
+				<h1>Gendarmerie</h1>
+				La brigade territoriale de proximité de gendarmerie regroupe les brigades de Senonches, La Ferté Vidame et de Brezolles.<br>
+				Permanences de la Brigade de Senonches :<br>
+				Mercredi 14h-18h Vendredi 8h-12h Samedi 8h-12h. Tel : <a href="tel:0033237373685">02 37 37 36 85</a><br>
+				Le reste du temps, la brigade est ouverte au public de façon aléatoire, lorsque les militaires de la brigade ne sont pas en service externe.<br>
+				Responsable de brigade.<br>
+				L'adjudante MASSARÉ Aurore<br>
+				Permanences de la Brigade de Brezolles :<br>
+				Du lundi au samedi de 8h à 12h et de 14h à 18h Le dimanche de 9h à 12h et de 15h à 18h.<br>
+			</section>
+			<section id="a23">
+				<p><a href="#a2">Infos pratiques</a>>Vie quotidienne></p>
+				<h1><a href="#a231">La Poste</a></h1>
+				<h1><a href="#a232">Transport</a></h1>
+				<h1><a href="#a233">Covoiturage</a></h1>
+				<h1><a href="#a234">Centre des finances publiques</a></h1>
+			</section>
+			<section id="a231">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a23">Vie quotidienne</a>></p>
+				<h1>LA POSTE</h1>
+				Guichets ouverts du lundi au vendredi : 09h à 12h et de 14h à 17h samedi : de 09h à 12h <br>
+				Levée du courrier : du lundi au vendredi à 16h pour les entreprises et à 16h20 pour les particuliers ; le samedi à 12h. <br>
+				Numéros Service consommateurs : 3631 (coût d'un appel non surtaxé hors surcoût éventuel de l'opérateur) <a href="http://www.laposte.fr">www.laposte.fr</a>
+			</section>
+			<section id="a232">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a23">Vie quotidienne</a>></p>
+				<h1>TRANSPORTS</h1>
+					<h2>Taxis</h2>
+					Pénard-Tessier - 61, route de la Ferté Vidame Tel : <a href="tel:0033237379111">02.37.37.91.11</a>
+					<h2>Transbeauce</h2>
+					Le point relais proposant les coupons (scolaires) et carnets de tickets est la boulangerie "Aux délices de Senonches", 19 rue Louis Peuret.
+					Tel : <a href="tel:0033237378023">02 37 37 80 23</a>
+					Ouvert du lundi au dimanche (sauf mercredi) de 6h30à 19h30.
+					En cas de fermeture pour congés annuels, vous pouvez vous rendre au point relais de La Loupe : Bellou Copies, 5 rue de l'Eglise Tel : <a href="tel:0033237814448">02 37 81 44 48</a>
+					Ouvert du mardi au samedi de 9h à 12h et de 15h30à 19h.
+					Transbeauce à la demande Vous pouvez vous déplacer dans l'arrondissement entre 9 heures et 17 heures, les lundis, mercredis et vendredis. Pour utiliser le service, il suffit de vous inscrire :<br>
+					- par courrier à : Agence commerciale Transbeauce - Place Pierre Sémard - 28 000 Chartres<br>
+					- par téléphone au <a href="tel:0825002829">0825 00 28 29</a>,<br>
+					- par Internet sur le site <a href="http://www.transbeauce.fr">www.transbeauce.fr</a><br>
+					Vous pouvez ensuite réserver par simple appel au "<a href="tel:0825002829">0825 00 28 29</a>, du lundi au samedi, de 9 heures à 17 heures, au plus tard la veille de votre trajet avant midi.
+					<h2>Agence de Chartres</h2>
+					Gare Routière-28000 Chartres Tel: <a href="tel:0033237185900">02 37 18 59 00</a> Du lundi au samedi de 6h45 à 19h50
+					<h2>Agence de Dreux</h2>
+					Gare Routière - 28100 Dreux Tel : <a href="tel:0033237658500">02 37 65 85 00</a> Du lundi au vendredi de 6h45 à 19h20 Le samedi de 6h45 à 18h30
+			</section>
+			<section id="a233">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a23">Vie quotidienne</a>></p>
+				<h1>COVOITURAGE</h1>
+					Le Conseil Général d'Eure-&-Loir a mis en place une plateforme qui met en relation conducteurs et passagers qui circuleront ensemble dans un même véhicule le temps d'un voyage ou régulièrement. Vous pourrez ainsi covoiturer entre votre domicile et votre lieu de travail ou d'une agglomération à l'autre.<br>
+					Le covoiturage s'adresse donc à tous ceux qui cherchent un moyen de déplacement, comme aux automobilistes qui souhaitent rouler plus intelligemment en réalisant des économies et en préservant notre environnement. Uniquement par internet : <a href="http://covoiturage.eurelien.fr">covoiturage.eurelien.fr</a>
+					 LE PARKING COVOITURAGE est place du four banal.<br>
+			</section>
+			<section id="a234">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a23">Vie quotidienne</a>></p>
+				<h1>CENTRE DES FINANCES PUBLIQUES</h1>
+					18 rue de La Gare - 28240 LA LOUPE<br>
+					Tel: <a href="tel:0033237810131">02 37 81 01 31</a><br>
+					Ouverture :<br>
+					Du lundi au vendredi de 9h à 13h. Fermé les après-midis
+
+			</section>
+			<section id="a24">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>Service urbanisme</h1>
+					Avant tous travaux de construction, de démolition, d'installation ou de modification d'enseignes, il est souhaitable de se rendre en mairie afin de collecter des informations concernant l'acte de construire ou la situation du bien (existence d'emplacement réservé, servitude, constructibilité du terrain, règlement du Plan Local d'urbanisme intercommunal...)<br>
+					Ce service est à votre écoute également concernant les renseignements d'urbanisme (consultation du cadastre, certificat de numérotation de voirie, alignements...).
+				<h2><a href="#a241">LE PLAN LOCAL D'URBANISME INTERCOMMUNAL</a></h2>
+				<h2><a href="#a242">LES AUTORISATIONS D'URBANISME</a></h2>
+				<h2><a href="#a243">LE CERTIFICAT D'URBANISME</a></h2>
+				<h2><a href="#a244">INSTALLATION OU MODIFICATION D'ENSEIGNE</a></h2>
+				<h2><a href="#a245">LE CADASTRE</a></h2>
+				<h2><a href="#a246">LES SITES UTILES</a></h2>
+				<h2><a href="#a247">LES ADRESSES UTILES</a></h2>
+			</section>
+			<section id="a241">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>LE PLAN LOCAL D'URBANISME INTERCOMMUNAL</h1>
+					Le Plan Local d'urbanisme intercommunal (PLUi) a été approuvé le 19 décembre 2008 par la Communauté de Communes du Perche Senonchois. Concrètement le PLUi décrit pour chaque zone définie dans le document graphique, le type d'occupation ou d'utilisation du sol, celles qui sont interdites ou soumises à des conditions particulières, les accès à la voirie, l'implantation des constructions par rapport aux voies et emprises publiques ou les unes par rapport aux autres, l'aspect extérieur et la qualité architecturale des constructions, ainsi que leur hauteur maximale.
+			</section>
+			<section id="a242">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>LES AUTORISATIONS D'URBANISME</h1>
+					<h2>Le permis de construire</h2>
+					Il est notamment obligatoire pour :<br>
+					•toute construction nouvelle dès lors que la surface de plancher ou l'emprise est supérieure à 20 m2.<br>
+					•l'agrandissement d'un bâtiment lorsque l'opération vise à créer plus de 20 m2 de surface de plancher en zone « AU », « N » et « A » du PLui, et plus de 40 m2 de surface de plancher en zone « U » du PLUi<br>
+					•quelque soit la surface créée, les travaux ayant pour objet de modifier la structure porteuse ou de la façade d'un bâtiment, et qui s'accompagnent d'un changement de destination.
+					<h2>Le permis de démolir</h2>
+					Il est obligatoire pour toute démolition totale ou partielle d'un bâtiment.<br>
+					Lorsque ces démolitions dépendent d'un projet de construction, la demande de permis de construire permet aussi de demander l'autorisation de démolir.
+					<h2>Le permis d'aménager</h2>
+					Il est notamment exigé pour :<br>
+					•la réalisation de certaines opérations de lotissement (à partir de 2 lots à bâtir avec réalisation ou aménagement de voies, d'espaces ou d'équipements communs)<br>
+					•la réalisation d'opération d'affouillement et d'exhaussement du sol d'une profondeur ou d'une hauteur supérieure à 2 mètres et qui porte sur une superficie supérieure ou égale à 100 m2.
+					<h2>La déclaration préalable</h2>
+					Elle est notamment exigée pour :<br>
+					•Toute construction nouvelle (même lorsqu'elle ne comporte pas de fondation) entraînant la création d'une surface de plancher de 5 m2 à 20 m2.<br>
+					•L'agrandissement d'une construction existante entraînant la création d'une surface de plancher jusqu'à 40 m2 en zone « U » du PLUi, et si la surface totale avec l'extension reste inférieure à 170 m2, seuil du recours à un architecte.<br>
+					•La modification de l'aspect extérieur d'un bâtiment (pose de fenêtres de toit type velux, le changement ou la création d'ouvertures, la réfection de toiture, la pose de panneaux solaires, le remplacement des menuiseries et des huisseries, le ravalement de façades dans le champ de visibilité d'un monument historique,...).<br>
+					•La pose de clôture et/ou de portail.<br>
+					•Certains changements de destination d'un bâtiment (exemple transformation d'un local commercial en local d'habitation), lorsqu'il n'y a pas de travaux.<br>
+					Pour toutes ces autorisations d'urbanisme, les délais d'instructions sont modifiés si le projet se situe dans le périmètre de protection des monuments historiques.
+			</section>
+			<section id="a243">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>LE CERTIFICAT D'URBANISME</h1>
+				Il existe 2 types de certificats d'urbanisme :<br>
+				•le certificat d'urbanisme d'information qui permet de connaître les dispositions d'urbanisme applicables à un terrain;<br>
+				•le certificat d'urbanisme opérationnel qui permet de connaître la faisabilité d'un projet sur une parcelle.<br>
+				Le délai d'instruction est d'un mois pour le certificat d'urbanisme de simple information, et de 2 mois pour le certificat d'urbanisme opérationnel.
+			</section>
+			<section id="a244">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>INSTALLATION OU MODIFICATION D'ENSEIGNE</h1>
+				Une demande doit être déposée en mairie, accompagnée des pièces nécessaires à son instruction :
+				Le délai d'instruction est d'1 mois ou de 2 mois s'il faut consulter un service extérieur (Architecte des Bâtiment de France par exemple).
+			</section>
+			<section id="a245">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+				<h1>LE CADASTRE</h1>
+					Le cadastre est l'identification et la description des propriétés. Il peut être consulté au service urbanisme pour un extrait de plan, une référence cadastrale, une superficie de parcelle, mais il n'est pas possible de donner les noms des propriétaires. Pour cela il faut s'adresser au service du cadastre.<br>
+					Les plans cadastraux peuvent être consultés ou commandés en ligne sur le site :	<a href="http://www.cadastre. gouv.fr">www.cadastre. gouv.fr</a>.<br>
+					Renseignements en mairie : Service urbanisme, PLUI Martine AUFFRET Tel : <a href="tel:0237373726">02 37 37 37 26</a>
+					e-mail : m.auffret@ville-senonches.fr<br>
+					Des informations sur l'urbanisme et le Plan Local d'Urbanisme intercommunal (règlement, zonage...) sont disponibles sur le site internet : <a href="http://www.senonches.com">www.senonches.com</a>
+			</section>
+			<section id="a246">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+					<h1>LES SITES UTILES</h1>
+						<h2><a href="http://www.service-public.fr">www.service-public.fr</a> :</h2>
+						rubrique logement, puis urbanisme : tous les renseignements sur les démarches administratives liées à la construction et au logement.
+						<h2><a href="http://www.equipement.gouv.fr">www.equipement.gouv.fr</a> :</h2> 
+						guichet des formulaires d'urbanisme.
+						<h2><a href="http://www.developpement-durable.gouv.fr">www.developpement-durable.gouv.fr</a> :</h2>
+						rubrique bâtiment et ville durables puis bâtiment et construction.
+			</section>
+			<section id="a247">
+				<p><a href="#a2">Infos pratiques</a>>Service urbanisme></p>
+					<h1>LES ADRESSES UTILES</h1>
+						<h2>CADASTRE</h2>
+						Centre des Finances Publiques de Dreux Service du Cadastre
+						1 bis, rue des Granges - 28109 DREUX cedex Té! : <a href="tel:"></a>02 37 38 04 84
+						<h2>CAUE 28</h2>
+						(Conseil d'Architecture, d'Urbanisme et de l'Environnement d'Eure-et-Loir)
+						87, rue du Grand Faubourg 28000 CHARTRES Tel : <a href="tel:0237212131">02 37 21 21 31</a>
+						Courriel : contact@caue28.org <a href="http://www.caue28.org">www.caue28.org</a>
+						<h2>Direction Départementale des Territoires d'Eure-et-Loir (DDT)</h2>
+						17, place de la République 28019 CHARTRES cedex - Tél. : <a href="tel:0237204060">02 37 20 40 60</a>
+						<h2>Parc Naturel Régional du Perche</h2>
+						Le Parc apporte conseils et aide technique aux projets de restauration, de réhabilitation et de rénovation du bâti traditionnel. Les personnes souhaitant intégrer les préoccupations énergétiques trouveront aussi des réponses à leurs questions. Maison du Parc - Courboyer - 61340 NOCE Tél. : <a href="tel:0233853636">02 33 85 36 36</a>
+						Courriel : secrétariat@parc-naturel-perche.fr <a href="http://www.parc-naturel-perche.fr">www.parc-naturel-perche.fr</a>
+						<h2>SDAP 28</h2>
+						(Service Départemental de l'Architecture et du Patrimoine d'Eure-et-Loir).
+						15, Place des Epars - 28000 CHARTRES Tél. : <a href="tel:0237364585">02 37 36 45 85</a>
+						Courriel : sdap.eure-et-loir@culture.gouv.fr
+						<h2>SDE28</h2>
+						(Syndicat Départemental d'Énergies d'Eure-et-Loir) Concernant les questions liées à l'énergie (distribution, fourniture au tarif réglementé, Maîtrise de l'énergie).
+						65 rue du Maréchal Leclerc - 28110 LUCÉ Tél. : <a href="tel:0237840785">02 37 84 07 85</a> <a href="http://www.sde28.fr">www.sde28.fr</a>
+			</section>
+			<section id="a25">
+				<p><a href="#a2">Infos pratiques</a>>Logement></p>
+					<h1>Logement</h1>
+					<h2>LOGEMENT SOCIAL</h2>
+					La commune dispose de 293 logements sociaux gérés par les Offices Publics de l'Habitat (OPH) suivants :
+					• l'Habitat Eurélien<br>• Eure-&-Loir Habitat <br>• La Roseraie<br>
+					Si vous cherchez à devenir locataire d'un logement HLM, renseignez-vous auprès de Corinne VIROULAUD à l'accueil de la mairie pour retirer un dossier. Les commissions d'étude des dossiers ont lieu une fois par mois pour chacun des organismes. Tel : <a href="tel:0237373727">02 37 37 37 27</a>
+						
+			</section>
+			<section id="a26">
+				<p><a href="#a2">Infos pratiques</a>>Formalités et démarches administratives></p>
+					<h1>Formalités et démarches administratives</h1>
+					<h2><a href="#a261">RECENSEMENT MILITAIRE</a></h2>
+					<h2><a href="#a262">INSCRIPTION SUR LES LISTES ÉLECTORALES</a></h2>
+					<h2><a href="#a263">NAISSANCE/BAPTEME CIVIL</a></h2>
+					<h2><a href="#a264">MARIAGE</a></h2>
+					<h2><a href="#a265">DÉCÈS</a></h2>
+					<h2><a href="#a266">DEMANDE DE CARTE D'IDENTITÉ</a></h2>
+					<h2><a href="#a267">DEMANDE DE PASSEPORT</a></h2>
+					<h2><a href="#a268">VOYAGE À DESTINATION DES ETATS-UNIS</a></h2>
+					<h2><a href="#a269">Autres démarches administratives</a></h2>
+			</section>
+			<section id="a261">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>RECENSEMENT MILITAIRE</h1>
+						L'inscription est obligatoire à la mairie du domicile pour les jeunes gens et jeunes filles dans le mois anniversaire de leur 16 ans ou jusqu'à la fin du 3e mois suivant. Ils devront présenter leur carte nationale d'identité ou le passeport en cours de validité et le livret de famille (ou l'acte de naissance). Attention : L'attestation de recensement qui est délivrée est nécessaire pour s'inscrire aux examens et aux concours (y compris le permis de conduire).
+			</section>
+			<section id="a262">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>INSCRIPTION SUR LES LISTES ÉLECTORALES</h1>
+						Il faut être de nationalité française ou européenne, avoir 18 ans révolus ou les avoir avant le 1er mars de l'année suivante. Les inscriptions sont receva-bles jusqu'au dernier jour ouvrable de décembre pour pouvoir voter à partir du 1er mars de l'année suivante. Présenter la carte nationale d'identité ou le passeport en cours de validité, un justificatif de domicile de moins de 3 mois (facture d'électricité EDF, relevé d'imposition...). Les personnes hébergées doivent produire en plus de la pièce d'identité en cours de validité, un certificat d'hébergement sur papier libre, la copie de la pièce d'identité de l'hébergeant, un justificatif de domicile de l'hébergeant (facture de moins de 3 mois) et une preuve de domiciliation (bulletin de salaire, attestation de sécurité sociale, relevé de comptes, facture de portable, etc.). Toute demande est personnelle.<br>
+						Pour l'inscription d'une tierce personne, une procuration est obligatoire ainsi que la carte nationale d'identité et le justificatif de domicile de moins de 3 mois de la personne concernée. Les jeunes qui auront 18 ans entre le 1er mars et le 28 février de l'année suivante, n'ont aucune démarche à effectuer. Leur inscription au recensement militaire entraîne l'inscription automatique sur les listes électorales. Les intéressés, seront avisés par courrier dans le 4ème trimestre de l'année en cours.<br>
+						En cas de changement d'adresse, une nouvelle inscription est obligatoire avant le 31 décembre.<br>
+						La commune recherche des personnes susceptibles de participer à la tenue d'un bureau de vote lors des élections, sur un créneau de 2h30. Si vous êtes intéressé^), merci de prendre contact avec Mme Meunier au <a href="tel:0237373723">02.37.37.37.23</a>
+			</section>
+			<section id="a263">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>NAISSANCE</h1>
+						Déclaration obligatoire dans les 3 jours suivant l'accouchement à la Mairie du lieu de naissance. Présenter un livret de famille, une pièce d'identité et la déclaration de naissance établie par la clinique ou l'hôpital.
+					<h1>RECONNAISSANCE PRÉ OU POST-NATALE</h1>
+						La déclaration est à faire à la mairie de son choix avant ou après la naissance. Une pièce d'identité doit être présentée.
+					<h1>BAPTEME CIVIL</h1>
+						Le baptême civil n'a aucune valeur juridique et représente uniquement un engagement moral. Il est célébré par le Maire ou un adjoint. Présenter un livret de famille, les noms, prénoms, professions et adresses des parrains, marraines et parents.
+			</section>
+			<section id="a264">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>MARIAGE</h1>
+					Il a lieu dans la commune de domicile ou de résidence de l'un ou l'autre des époux. Pièces à fournir pour les deux conjoints : carte nationale d'identité ou passeport, extrait d'acte de naissance de moins de 3 mois, justificatif de domicile ou de résidence.<br>
+					En cas de contrat de mariage : attestation du notaire.<br>
+					Pour les cas particuliers, veuillez contacter Nelly DESSE au <a href="tel:0237377676">02 37 37 76 76</a>
+			</section>
+			<section id="a265">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>DÉCÈS</h1>
+						Déclaration à faire le plus tôt possible au bureau d'état civil (Mme Nelly DESSE). Fournir le livret de famille ou à défaut, tout renseignement d'état civil et un certificat de décès établi par le médecin pour délivrance du permis d'inhumer par la mairie. Une entreprise de Pompes funèbres peut se charger de toutes les démarches.
+			</section>
+			<section id="a266">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>DEMANDE DE CARTE D'IDENTITÉ</h1>
+						La délivrance de la carte nationale d'identité est gratuite sauf lors d'un renouvellement si la précédente carte n'est pas retournée au guichet de la Mairie. Dans ce cas et en cas de perte, la demande sera soumise à un droit de timbre de 25 €. Le demandeur doit déposer personnellement son dossier.<br>
+						Documents à fournir :<br>
+						•2 photos « nouvelles normes » (non scannées, tête nue, sans mèche de cheveux sur les yeux, ne pas les découper, 3 à 5 mm entre le haut de la tête et la bordure de la photo) •Un extrait de naissance avec filiation complète, (pour une 1ère demande ou si la carte est périmée depuis plus de 2 ans) <br>
+						•1 justificatif de domicile de moins de 3 mois <br>
+						•L'ancienne carte d'identité pour un renouvellement. <br>
+						•Pour les enfants mineurs : le livret de famille complet et la carte d'identité du parent demandeur. En cas de séparation ou de divorce, fournir le jugement du tribunal.
+			</section>
+			<section id="a267">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>DEMANDE DE PASSEPORT</h1>
+						Les tarifs applicables aux demandes déposées depuis le 1er janvier 2010 sont de : <br>
+						• 86 € pour les personnes majeures. <br>
+						• 42 € pour les mineurs de 15 à 17 ans. <br>
+						• 17 € pour les mineurs en dessous de 15 ans. <br>
+						La Mairie de Senonches n'est pas habilitée pour les passeports. Voir avec les mairies de La Loupe, Brezolles, Nogent-le-Rotrou, Chartres, Dreux etc. Documents à fournir :<br>
+						• Photocopie de la carte nationale d'identité ou du livret de famille ou extrait d'acte de naissance de moins de 3 mois avec filiation complète <br>
+						• 2 photos d'identité identiques et conformes aux normes. <br>
+						• 1 justificatif de domicile de moins de un an.
+			</section>
+			<section id="a268">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>VOYAGE À DESTINATION DES ETATS-UNIS</h1>
+Les ressortissants français souhaitant se rendre sur le territoire américain doivent obtenir une autorisation de voyage de la part des autorités américaines, via le formulaire disponible : <a href="https://esta.cbp.dhs.gov">esta.cbp.dhs.gov</a>
+Il est recommandé de déposer cette demande au moins 72 heures avant le départ.
+			</section>
+			<section id="a269">
+				<p><a href="#a2">Infos pratiques</a>><a href="#a26">Formalités et démarches administratives</a>></p>
+					<h1>Autres démarches administratives</h1>
+					<h2>Carte d'invalidité civile</h2>
+					En Mairie : Formulaire à remplir, 1 photo d'identité, certificat médical à retirer en mairie, justificatif d'état civil et de domicile
+					<h2>Certificat de départ à l'étranger</h2>
+					En Mairie : Pièce d'identité ou livret de famille. Justificatif de l'employeur et adresse à l'étranger
+					<h2>Extrait d'acte de décès</h2>
+					En Mairie du décès ou du dernier domicile :Indiquer la date du décès, le nom et les prénoms de la personne dernier domicile (indiquer le nom de jeune fille s'il y a lieu). Fournir une enveloppe timbrée.
+					<h2>Extrait d'acte de naissance</h2>
+					En Mairie du lieu de naissance : Indiquer la date de naissance, le nom et les prénoms, la filiation. Joindre une enveloppe timbrée.
+					<h2>Extrait d'acte pour les français nés à l'étranger</h2>
+					Au Ministère des affaires étrangères, service état civil 23 allée d'Orléans 44035 NANTES cedex : indiquer nom, prénoms, filiation, date et lieu de naissance, de deces, de mariage. Joindre une copie de la carte d'identité ou du livret de famille et une enveloppe timbrée
+					<h2>Extrait de casier judiciaire</h2>
+					A Casier judiciaire national 107 rue du Landreau 44035 NANTES : Photocopie d'une pièce d'identité. Enveloppe timbrée. Les français nés à l'étranger doivent s'adresser : 23 allée d'Orléans 44035 Nantes cedex
+					<h2>PACS</h2>
+					Au Notaire ou greffe du tribunal d'instance : Pièces d'identité. Extraits d'acte de naissance avec filiation. Convention écrite
+					<h2>Acte de notoriété (succession)</h2>
+					Au Notaire : Acte de décès, livret de famille et pièces d'identité
+					<h1>Durée de conservation des documents</h1>
+					<h2>Relevés de compte, talons de chècque</h2>
+					5 ans - Un débit frauduleux peut être contesté dans un délai maximum de 18 mois
+					<h2>Livret de famille</h2>
+					Permanente - En cas de perte, un duplicata peut être obtenu à la mairie
+					<h2>Jugement de divorce, jugement d'adoption</h2>
+					Permanente - En cas de perte, une copie est fournie par le tribunal
+					<h2>Factures d'électricité, de gaz et d'eau</h2>
+					5 ans - Délai pour contester une facture.
+					<h2>Factures de téléphonie (fixe et mobile) et internet</h2>
+					1 an
+					<h2>Factures liées aux travaux</h2>
+					Gros-Œuvre: 10 ans Petits travaux (fenêtres par exemple) : 2 ans
+					<h2>Certificats de ramonage</h2>
+					Durée d'occupation du logement +1 an
+					<h2>Contrat de location, état des lieux, quittances de loyer</h2>
+					Durée de la location + 3 ans - Ces délais s'appliquent aux logements loués comme résidence principale (vides ou meublés)
+					<h2>Déclaration de revenus et avis d'imposition sur le revenu</h2>3 ans à compter de l'année qui suit l'année d'imposition
+					<h2>Bulletins de salaire, contrat de travail, certificats de travail</h2>
+					Jusqu'à la liquidation de la retraite - Le salarié dispose de 3 ans pour réclamer un arriéré de salaire
+					<h2>Papiers d'une personne décédée</h2>
+					Les délais de conservation des papiers continuent de s'appliquer après le décès du défunt car certains peuvent prouver des dettes ou des créances transmises aux ayants droits lors de la succession. Le versement de certaines prestations sociales après le décès du bénéficiaire peuvent faite l'objet d'une action en recouvrement auprès des ayants droit pendant 5 ans à compter du décès.<br>
+			</section>
+			<section id="a3">
+				<p>Solidarité - Action sociale></p>
+					<h1><a href="#a31">Services sociaux</a></h1>
+					<h1><a href="#a32">Emploi</a></h1>
+					<h1><a href="#a33">Associations caritatives et entraides</a></h1>
+					<h1><a href="#a34">Services utiles</a></h1>
+					<h1><a href="#a35">Retraite, personnes âgées</a></h1>
+			</section>
+			<section id="a31">
+				<p><a href="#a3">Solidarité - Action sociale</a>>Services sociaux></p>
+					<h2><a href="#a311">LE CENTRE COMMUNAL D'ACTION SOCIALE (CCAS)</a></h2>
+					<h2><a href="#a312">ASSISTANTE SOCIALE DU CONSEIL DEPARTEMENTAL</a></h2>
+					<h2><a href="#a313">Services sociaux</a></h2>
+
+			</section>
+			<section id="a311">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a31">Services sociaux</a>></p>
+					<h1>LE CENTRE COMMUNAL D'ACTION SOCIALE (CCAS)</h1>
+						Le Centre Communal d'Action Sociale, représenté par Mme Florence ROCTON vous accueille pour toute demande d'aide sociale telle que :
+						•Revenu de Solidarité Active (RSA qui remplace le RMI)<br>
+						•Couverture Maladie Universelle <br>
+						•Allocation Logement<br>
+						•Bon alimentaire d'urgence (sous conditions de ressources ; parfois un remboursement total ou partiel de l'aide est demandé)<br>
+						•Toute demande d'aide sociale concernant les personnes handicapées (carte d'invalidité, Allocation Adulte Handicapé, Prestation de Compensation du Handicap, orientation professionnelle et/ou reconnaissance travailleur handicapé, placement en foyer spécialisé, Allocation d'Education de l'Enfant Handicapé, aide concernant la scolarisation ou les études...) <br>
+						•Toute demande d'aide sociale concernant les personnes âgées (Allocation Personnalisée d'Autonomie, aide sociale pour placement en maison de retraite, Allocation de Solidarité aux Personnes Agées)<br>
+						Mme ROCTON a également un rôle d'information, de conseil et d'orientation, en matière d'aides sociales.<br>
+						Les familles avec enfants seront orientées prioritairement vers l'assistante sociale du Conseil Général. Le CCAS assure également la gestion des inscriptions aux écoles publiques et à la cantine scolaire de Senonches (maternelle et primaire), ainsi que celle du banquet de l'amitié et des colis de noël.<br>
+						CCAS
+						Tél <a href="tel:0237373724">02.37.37.37.24</a> -ccas@ville-senonches.fr Accueil sur rendez-vous.
+			</section>
+			<section id="a312">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a31">Services sociaux</a>></p>
+					<h1>ASSISTANTE SOCIALE DU CONSEIL DEPARTEMENTAL</h1>
+						L'objectif principal du service d'action sociale du département est d'aider les personnes en difficulté à améliorer leurs conditions de vie sur le plan social; à développer leur capacité à être autonome et mener avec eux des actions pour prévenir et surmonter leurs difficultés.<br>
+						Les missions de l'assistante sociale sont:<br>
+						•faciliter l'accès aux droits <br>
+						•l'accompagnement psycho-social des personnes en difficulté <br>
+						•accompagnement social des bénéficiaires du RSA (Revenu de Solidarité Active)<br>
+						•la prévention et la protection de l'enfance en danger et des personnes vulnérables.<br>
+						L'assistante sociale est soumise au secret professionnel et à l'obligation de discrétion pour toutes les informations dont elle aura connaissance au cours de ses interventions.<br>
+						Assistante sociale de secteur : Emilie SCUDERI Permanences à la Maison de Santé le mardi de 9H15 à 12H15 et un jeudi sur deux de 9h15 à 12h15. Possibilité de visites à domicile.<br>
+						Secrétariat du territoire : Tél <a href="tel:02 37 65 82 54">02 37 65 82 54</a>
+			</section>
+			<section id="a313">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a31">Services sociaux</a>></p>
+					<h1>SERVICE SOCIAL DE L'ASSURANCE MALADIE (CARSAT)</h1>
+						Pour vous informer sur vos droits et démarches pour accéder aux soins, notamment en cas de difficultés liées aux conséquences de la maladie ou du vieillissement.<br>
+						27 Rue d’Aquitaine 28114 LUCE cedex Servicesocial.chartres@carsat-centre.fr <a href="http://www.carsat-centre.fr">www.carsat-centre.fr</a><br>
+						Permanence au bureau annexe de la mairie de Senonches le 3e mercredi du mois de 9h à 12h et de 13h à 16h, sur RDV au <a href="tel:0971103960">09 71 10 39 60</a> du lundi au vendredi de 8h à 17h
+			</section>
+			<section id="a32">
+				<p><a href="#a3">Solidarité - Action sociale</a>>Emploi></p>
+					<h2><a href="#a321">LE RELAIS EMPLOI</a></h2>
+					<h2><a href="#a322">LA MISSION LOCALE DE DREUX ET SON ARRONDISSEMENT</a></h2>
+			</section>
+			<section id="a321">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a32">Emploi</a>></p>
+					<h1>LE RELAIS EMPLOI</h1>
+						Notre coordinatrice emploi, vous accueille dans le cadre de votre insertion professionnelle et vous propose différentes prestations :
+						•Des services destinés aux demandeurs d'emploi et aux entreprises locales •Un partenariat avec les acteurs locaux, départementaux et régionaux •Un suivi individuel et personnalisé dans toutes les démarches •Une salle Cyber Emploi mise gracieusement à disposition des demandeurs d'emploi pour effectuer leurs recherches •Des ateliers individuels d'aide à la rédaction de CV et lettre de motivation •Simulation et préparation aux entretiens de recrutement •Des aides à la mobilité •Des actions et manifestations ponctuelles
+						Vous trouverez également un espace cyber emploi disposant d'une connexion informatigue gratuite pour votre recherche d'emploi.
+						Coordinatrice : Amelie BLANCHET<br>
+						Relais Emploi (partenaire Pôle Emploi)
+						Tél : <a href="tel:0237373730">02 37 37 37 30</a>
+						relais.emploi@ville-senonches.fr <br>
+						Mardi : 9h30- 12h (sans RDV)/ 14h-18h (sur RDV)<br>
+						jeudi : 9h30- 12h (sans RDV)/ 15h-18h (sur RDV)<br>
+						Vendredi : 14h-17h (sans RDV)<br>
+						Fermé le lundi et le mercredi.<br>
+			</section>
+			<section id="a322">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a32">Emploi</a>></p>
+					<h1>LA MISSION LOCALE DE DREUX ET SON ARRONDISSEMENT</h1>
+						La Mission Locale agit en faveur des jeunes demandeurs d'emploi de 16 à 25 ans sortis du système scolaire. Elle propose un accompagnement personnalisé pour les recherches d'emploi ou de formation mais également des informations et un accès au pôle santé, écoute et soutien psychologigue. Des services et actions se déroulent sur Dreux (atelier emploi, formation et orientation, lutte et prévention des discriminations, permanence juridique), un transport « GRACES » est proposé pour s'y rendre directement.
+						Permanence bureau annexe de la mairie de Senonches les 1er, 2e et 3e jeudis du mois de 9h à 12h sur rendez-vous.<br>
+						Renseignements et RDV au <a href="tel:0237385767">02 37 38 57 67</a> -mission.locale.dreux@wanadoo.fr -site internet : <a href="http://www.mldreux.com">www.mldreux.com</a>
+
+			</section>
+			<section id="a33">
+				<p><a href="#a3">Solidarité - Action sociale</a>>Associations caritatives et entraides></p>
+					<h1><a href="#a331">LES RESTOS DU COEUR</a></h1>
+					<h1><a href="#a332">LE SECOURS CATHOLIQUE</a></h1>
+					<h1><a href="#a333">SECOURS POPULAIRE</a></h1>
+					<h1><a href="#a334">LE SEL (Système d'Echange Local)</a></h1>
+					<h1><a href="#a335">Collecte les bouchons en vue d’aider les personnes handicapées.</a></h1>
+			</section>
+			<section id="a331">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a33">Associations caritatives et entraides</a>></p>
+					<h1>LES RESTOS DU COEUR</h1>
+						Les restas du cœur vous accueillent le lundi après-midi à la salle des fêtes.<br>
+						Pour devenir bénévole, obtenir des renseignements ou vous inscrire :<br>
+						Responsable : Chantai VANDER BAUVELD
+						Tél. <a href="tel:0647990387">06 47 99 03 87</a>/<a href="tel:0237378132">02 37 37 81 32</a>/<a href="tel:0631877323">06 31 87 73 23</a>
+			</section>
+			<section id="a332">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a33">Associations caritatives et entraides</a>></p>
+					<h1>LE SECOURS CATHOLIQUE</h1>
+						L'équipe Secours Catholique vous accueille le mardi après-midi de 14h à 16h et le jeudi de 10h à 11 h30, au pied du Château (sauf juillet et août). Une boutique solidaire tenue par 12 bénévoles est au service de tous. Elle propose contre une petite participation tout ce qui est utile dans une famille : linge, vaisselle, bibelots, livres, jouets, vêtements, chaussures, petit mobilier, etc...
+						Une épicerie sociale après étude des ressources et un rendez-vous avec les travailleurs sociaux fonctionne pour certaines familles.
+						Des aides financières peuvent être apportées en étroit lien avec le tissu social, le CCAS et l'assistante sociale.<br>
+						Le Secours Catholique de Senonches propose également des braderies annoncées par voie de presse, publicité et affichage à l'Office de Tourisme et chez les commerçants locaux.<br>
+						Pour une rencontre spirituelle ouverte à tous, une fraternité d'Evangile a lieu tous les 15 jours.<br>
+						N'hésitez pas à pousser la porte du Secours Catholique pour une demande d'aide en cas de difficultés, pour apporter des dons ou proposer de votre temps en temps que bénévole.<br>
+						Secours Catholique - Rue du Château
+						Tel: <a href="tel:0642328115">06 42 32 81 15</a>
+			</section>
+			<section id="a333">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a33">Associations caritatives et entraides</a>></p>
+					<h1>SECOURS POPULAIRE</h1>
+						L’équipe de bénévoles du secours populaire de Senonches vous accueille dans son local 5, rue des Marronniers les 1er et 3e jeudis de chaque mois à partir de 14 heures.<br>
+						Le comité de Senonches apporte accueil, écoute et aide alimentaire à toute personne en difficulté.<br>
+						Les demandes d'aide sont faites en liaison avec les services du conseil départemental et de la mairie. Le vestiaire est ouvert à tous contre une modeste participation.<br>
+						N'hésitez pas à venir nous voir en cas de difficultés, ou pour apporter des dons, ou pour devenir bénévole.<br>
+						Secours Populaire - 5, rue des Marronniers <br>
+						Renseignements auprès de Mme Lucienne ALEXANDRE au <a href="tel:0237377617">02 37 37 76 17</a> 
+						Mme Anne-Marie BARBOT au <a href="tel:0237377687">02 37 37 76 87</a>
+			</section>
+			<section id="a334">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a33">Associations caritatives et entraides</a>></p>
+					<h1>LE SEL (Système d'Echange Local)</h1>
+						Dans un S.E.L., tous les membres sont placés sur un pied d'égalité : Le service offert (objet, jardinage, cours de guitare, séance de sophrologie, formation informatique,...) n'est pas jugé sur sa qualification mais sur le temps passé. Ainsi, une heure de ménage vaut autant qu'une heure de cours d'informatique.<br>
+						L'association réalise des permanences pour l'échange des produits et organise des sorties et ateliers divers.
+						<h2>Permanence au local de l'association</h2>
+						1 rue des marronniers, tous les 1er samedis du mois de 10h à 12h Contact Chantai LELIÈVRE :
+						Tel : <a href="tel:0237377905">02 37 37 79 05</a> / <a href="tel:0661845438">06 61 84 54 38</a>
+						selsenonches@outlook.com
+						<a href="http://selsenonches.wix.com/28250">http://selsenonches.wix.com/28250</a>
+			</section>
+			<section id="a335">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a33">Associations caritatives et entraides</a>></p>
+					<h1>Collecte les bouchons en vue d’aider les personnes handicapées.</h1>
+						Elle récolte tout ce qui bouche, même les bouchons en liège. Le plastique est recyclé en palettes, boîtes et divers objets. Elle récupère également les cartouches d’encre d'imprimantes, les stylos usés, les gourdes de compote...
+						Points de collectes à Senonches : 56, rue de la Ferté Vidame et Intermarché.
+						Renseignements : Christophe CHARMOIS Tél : <a href="tel:0610252471">06 10 25 24 71</a> recup.petits.bouchons@bbox.fr <a href="http://www.facebook.com/recup.petits.bouchons">www.facebook.com/recup.petits.bouchons</a>
+			</section>
+			<section id="a34">
+				<p><a href="#a3">Solidarité - Action sociale</a>>Services utiles></p>
+					<h1><a href="#a341">CONCILIATEUR DE JUSTICE</a></h1>
+						Les permanences ont lieu le lundi sur rendez-vous à la Mairie de Brezolles, 1 rue Notre-Dame.
+						Tél : <a href="tel:0237624087">02.37.62.40.87</a>
+					<h1><a href="#a342">PERMANENCES JURIDIQUES</a></h1>
+						Service gratuit et ouvert à tous, tous les jeudis de 17h30 à 19h30 sur RDV au <a href="tel:0687735477">06 87 73 54 77</a>.
+			</section>
+			<section id="a341">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a34">Services utiles</a>></p>
+					<h1>CONCILIATEUR DE JUSTICE</h1>
+						Monsieur Guy NAVEAU peut intervenir dans de nombreux litiges entre particulier et société, employeur, commerçant ou artisan ou entre particuliers. Il n’intervient pas dans le domaine familial ou pour des dossiers de surendettement.<br>
+						Celui-ci propose une réunion entre les parties concernées et recherche un règlement amiable du litige. Il peut alors établir un constat d'accord qu'il signe avec les parties et dépose au tribunal d'instance.<br>
+						Son intervention est gratuite.
+						
+			</section>
+			<section id="a342">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a34">Services utiles</a>></p>
+					<h1>PERMANENCES JURIDIQUES</h1>
+						Senonches, local du Secours Catholique, 5 rue du Château.
+						Vous recevrez une information claire sur vos droits et obligations dans votre vie familiale, personnelle ou professionnelle. Vous apprendrez la meilleure façon de résoudre un conflit ou un problème. Vous serez informés sur le déroulement des procédures et comment vous y préparer. Vous pouvez également être aidés pour rédiger vos lettres difficiles.
+
+			</section>
+			<section id="a35">
+				<p><a href="#a3">Solidarité - Action sociale</a>>Retraite, personnes âgées></p>
+					<h1><a href="#a351">PERMANENCE CENTRE INFORMATION CONSEIL ACCUEIL DES SALARIES D'EURE-ET-LOIR (ARCCO-CICAS)</a></h1>
+					<h1><a href="#a352">CAISSE D'ASSURANCE RETRAITE ET DE LA SECURITE AU TRAVAIL (CARSAT)</a></h1>
+					<h1><a href="#a353">SENIOR INFO SERVICES</a></h1>
+					<h1><a href="#a354">ASSOCIATION DU MAINTIEN A DOMICILE (ADMR)</a></h1>
+					<h1><a href="#a355">SERVICE AIDE A DOMICILE SCHWEITZER (SADS)</a></h1>
+					<h1><a href="#a356">MAISON DE RETRAITE PERIER (EHPAD)</a></h1>
+					<h1><a href="#a357">MAISON D'ACCUEIL SPECIALISEE NOTRE-DAME</a></h1>
+
+			</section>
+			<section id="a351">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>PERMANENCE CENTRE INFORMATION CONSEIL ACCUEIL DES SALARIES D'EURE-ET-LOIR (ARCCO-CICAS)</h1>
+						Il	informe les salariés en activité, au chômage ou en maladie/invalidité, sur leurs droits à la retraite ARCCO, AGIRC et IRCANTEC et les futurs retraités pour les aider à constituer leur dossier de retraite complémentaire.<br>
+						Accueil sur RDV pris en téléphonant au <a href="tel:0820200189">0820 200 189</a>
+						Permanence les 2e et 4e lundis du mois de 9 H à 12 H<br>
+						Responsable : Thierry GALLET tgallet@agirc-arrco.fr
+			</section>
+			<section id="a352">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>CAISSE D'ASSURANCE RETRAITE ET DE LA SECURITE AU TRAVAIL (CARSAT)</h1>
+						39 60 4 Le numéro unique de l'Assurance Retraite
+						de la Sécurité Sociale<br>
+						•Toute l'actualité sur la retraite<br>
+						•Accès à des informations personnelles : suivi du dossier, les derniers paiements, le montant pour la déclaration fiscale<br>
+						•Mise en relation avec un conseiller du lundi au vendredi de 8h à 17h : informations sur la retraite, sur les aides à domicile<br>
+						Pour appeler de l'étranger, d'une box ou d'un mobile, composer le <a href="tel:0971103960">09 71 10 39 60</a> Site : <a href="http://www.carsat-centre.fr">www.carsat-centre.fr</a>
+						Permanence à la mairie le 3ème mercredi du mois de 9h à 12h et de 13h à 16h sur rendez-vous au <a href="tel:3960">3960</a>.
+			</section>
+			<section id="a353">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>SENIOR INFO SERVICES</h1>
+						Comment bénéficier de l'Allocation personnalisée d'autonomie (APA) ? Existe-t-il des établissements qui accueillent des personnes atteintes d'Alzhei-mer près de chez moi ? Quels sont les services d'aides à domicile agréés qui peuvent intervenir au domicile de mes parents ?<br>
+						Le Conseil Départemental a mis en place un service d'information et d'orientation qui vous met directement en relation avec un opérateur pour répondre à toutes vos questions sur la vie des seniors en Eure-et-Loir.
+						Senior Info-Services : <a href="tel:0237642550">02 37 64 25 50</a> ou <a href="tel:0236256413">02 36 25 64 13</a>
+			</section>
+			<section id="a354">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>ASSOCIATION DU MAINTIEN A DOMICILE (ADMR)</h1>
+						La maison de services vous accueille dans son bureau au 7, place des Halles (à côté de la pharmacie). Ménage, repassage, aide aux personnes âgées, handicapées, aide aux familles, portage de repas et téléassistance, quel que soit votre besoin, les bénévoles de l'association ADMR sauront vous conseiller et, aidés de la coordinatrice de secteur, mettre en place l'intervention qu'il vous faut.<br>
+						Responsable : Jean-François CHAYLAC<br>
+						Tél : <a href="tel:0237370619">02 37 37 06 19</a> / Fax : 02 37 29 05 10 senonches@fede28@outlook.com Bureaux ouverts :
+						Du lundi au vendredi de 9h à 12h
+			</section>
+			<section id="a355">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>SERVICE AIDE A DOMICILE SCHWEITZER (SADS)</h1>
+						SADS vous propose :
+						•activités quotidiennes : ménage, repassage, entretien du linge, garde d'enfants, courses ; <br>
+						•aide à la personne : aide au repas, toilette, aide à l'hygiène ;<br>
+						•aide à la lecture/écriture, présence, écoute <br>
+						•téléassistance<br>
+						Bureaux à La Loupe : Tél : <a href="tel:0237810802">02 37 81 08 02</a><br> Ouvert du lundi au vendredi 8h30-12h/13h30-16h30
+			</section>
+			<section id="a356">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>MAISON DE RETRAITE PERIER (EHPAD)</h1>
+						1 route de Dreux - Tél : <a href="tel:0237377327">02 37 37 73 27</a>
+			</section>
+			<section id="a357">
+				<p><a href="#a3">Solidarité - Action sociale</a>><a href="#a35">Retraite, personnes âgées</a>></p>
+					<h1>MAISON D'ACCUEIL SPECIALISEE NOTRE-DAME</h1>
+						Ouverte depuis 1993, la MAS accueille 62 personnes adultes en situation de polyhandicap, hommes et femmes ne pouvant se prendre en charge seules dans les actes de la vie quotidienne, dont l'état de santé nécessite une surveillance médicale et des soins constants, et dont la famille réside dans le département de l'Eure-et-Loir.<br>
+						La Maison d'Accueil Spécialisée Notre-Dame est un lieu de vie et d'accueil ouvert sur l'extérieur, le plus proche possible des familles et de la vie sociale. Une équipe médicale et paramédicale est chargée du suivi des résidants au plan des soins infirmiers, de la kinésithérapie et de l'ergothérapie.
+						<h2>Pour tout renseignement :</h2>
+						Maison d'Accueil Spécialisée Notre-Dame 6 rue des Vallées - Tél : <a href="tel:0237535200">02.37.53.52.00</a> 
+						mas.senonches@association-notre-dame.org Site internet : <a href="http://www.association-notre-dame.org">www.association-notre-dame.org</a>
+			</section>		
+			<section id="a4">
+				<p>Petite enfance - vie scolaire></p>
+				<h1><a href="#a41">Petite enfance</a></h1>
+				<h1><a href="#a42">Ecoles et collège</a></h1>
+				<h1><a href="#a43">Services périscolaires</a></h1>
+			</section>
+			<section id="a41">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>>Petite enfance></p>
+					<h1><a href="#a411">CRECHE / HALTE-GARDERIE « LES LUTINS »</a></h1>
+					<h1><a href="#a412">ASSISTANTES MATERNELLES</a></h1>
+					<h1><a href="#a413">PROTECTION MATERNELLE ET INFANTILE (PMI)</a></h1>
+			</section>
+			<section id="a411">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a41">Petite enfance</a>></p>
+					<h1>CRECHE / HALTE-GARDERIE « LES LUTINS »</h1>
+						Situé au 1 B avenue d'Horicon, le multi-accueil accueille les enfants de 2 mois à 4 ans et dispose d'une capacité de 22 berceaux. Il propose des accueils réguliers, occasionnels ou d'urgence (quand le mode de garde habituel fait défaut).
+						Une équipe de professionnelles pluridisciplinaires accueille vos enfants de 7h30 à 18h, du lundi au vendredi.
+						La crèche, ouverte en août 2007, est gérée par Crèche Attitude, société spécialisée dans la création et la gestion de structures d'accueil petite enfance.<br>
+						Une commission d'admission se réunit chaque année vers le mois d'avril pour étudier les demandes d'inscription.<br>
+						Pour retirer un dossier d'inscription ou pour tout renseignement, nous vous remercions de prendre contact auprès d'Aurélie ALVES DE MAGALHES, directrice de la crèche au <a href="tel:0237379096">02 37 37 90 96</a>
+			</section>
+			<section id="a412">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a41">Petite enfance</a>></p>
+					<h1>ASSISTANTES MATERNELLES</h1>
+						L'assistante maternelle accueille votre enfant chez elle et peut garder jusqu'à trois petits à la fois. Elle doit avoir reçu l'agrément de la Protection Maternelle et Infantile (service du Conseil Général). Délivré pour 5 ans, il apporte une garantie aux parents concernant les compétences de la nourrice mais également la salubrité de son logement. Elle doit suivre soixante heures de formation avant de pouvoir exercer. En tant qu'employeur, vous devez rédiger un contrat de travail qui précisera le nombre de semaines de garde sur lequel vous vous engagez pour l'année ainsi que le salaire. A noter que l'assistante maternelle a droit aux congés payés et à la formation.<br>
+						Pour obtenir la liste des assistantes maternelles agrées à Senonches et exerçant dans la Communauté de Communes du Perche Senonchois, vous pouvez la retirer à la Mairie de Senonches ou la consulter sur le site internet de la commune <a href="http://www.senonches.fr">www.senonches.fr</a><br>
+			</section>
+			<section id="a413">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a41">Petite enfance</a>></p>
+					<h1>PROTECTION MATERNELLE ET INFANTILE (PMI)</h1>
+						La PMI est une mission du Conseil Départemental assurée par des professionnels (médecins, sage-femmes, psychologues, infirmières-puéricultrices, éducatrices de jeunes enfants, secrétaires) chargés d'évaluer les risques et de mettre en place des actions de prévention médicale, psychologique, sociale et d'éducation pour la santé en faveur des futures mères et des enfants de moins de 6 ans.
+						Rencontre des familles en consultation, en visite à domicile et sur rendez-vous.<br>
+						Tél : <a href="tel:0237658266">02 37 65 82 66</a><br>
+						Permanences à la Maison de santé, 7 chemin de la Hutte<br>
+						Permanence infirmière puéricultrice : les 2e et 4e jeudis du mois de 9h30 à 12h Consultation pédiatre : le 1er jeudi du mois toute la journée, sur ROV.<br>
+						ALLO ALLAITEMENT : <a href="tel:0237201484">02 37 20 14 84</a> - Du lundi au vendredi de 9 h à 12 heures.
+			</section>
+			<section id="a42">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>>Ecoles et collège></p>
+					<h1><a href="#a421">Ecole publique maternelle « Les Vallées »</a></h1>
+					<h1><a href="#a422">Ecole publique Jacques-Yves Cousteau</a></h1>
+					<h1><a href="#a423">Ecole privée Sainte Marie (maternelle et primaire).</a></h1>
+					<h1><a href="#a424">Collège La Loge des Bois</a></h1>
+					<h1><a href="#a425">Ecole privée Sainte Marie (maternelle et primaire).</a></h1>
+			</section>
+			<section id="a421">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a42">Ecoles et collège</a>></p>
+					<h1>Ecole publique maternelle « Les Vallées »</h1>
+						2, rue des Vallées - Tél : <a href="tel:0237377214">02 37 37 72 14</a> <br>
+						Directrice : Mme Michèle B0SS0 Horaires : 8h30 (ouverture dès 8h20)-11h40 ; 13h30 (ouverture dès 13h20)-16h20 <br>
+						Inscriptions en Mairie auprès de Madame ROCTON : Tél : <a href="tel:0237373724">02.37.37.37.24</a>.
+			</section>
+			<section id="a422">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a42">Ecoles et collège</a>></p>
+					<h1>Ecole publique Jacques-Yves Cousteau</h1>
+						La Moinerie - Tél : <a href="tel:0237377747">02 37 37 77 47</a> <br>
+						Directeur : M. Thierry POMMIER Horaires : 8h30-11h30 ; 13h30-16h30 <br>
+						Inscriptions en Mairie auprès de Madame ROCTON : Tél : <a href="tel:0237373724">02 37 37 37 24</a>.
+			</section>
+			<section id="a423">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a42">Ecoles et collège</a>></p>
+					<h1>Ecole privée Sainte Marie (maternelle et primaire). </h1>
+						Accueil dès 2 ans (sous condition)
+						2, route de Dreux - Tél : <a href="tel:0237377651">02 37 37 76 51</a> <br>
+						Directrice : Mme Geneviève VANDROMME Mail : ecole-privee-sainte-marie@wanadoo.fr
+			</section>
+			<section id="a424">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a42">Ecoles et collège</a>></p>
+					<h1>Collège La Loge des Bois</h1>
+						Le collège de la Loge des Bois est situé 17, avenue Poucin, dans un cadre de verdure exceptionnel. Classes bi-langue anglais/allemand à partir de la 6ème, classe environnement et classe patrimoine depuis la rentrée 2011. Le collège est inscrit depuis 2007 dans le réseau des écoles associées à l'UNESCO. Les élèves développent des projets qui s'accordent avec la charte du réseau, mais aussi avec le développement durable.<br>
+						Principal : Marie-Pierre OUDILL BERTRAND.
+						Tél <a href="tel:0237535920">02 37 53 59 20</a>
+						Mail : ce.0280887m@ac-orleans-tours.fr
+			</section>
+			<section id="a425">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a42">Ecoles et collège</a>></p>
+					<h1>Délégués Départementaux de l'Education Nationale (DDEN)</h1>
+						Les DDEN assistent au conseil d'école, visitent les bâtiments scolaires (équipements, entretien, hygiène, sécurité). Ils sont le lien entre l'école, les parents, la municipalité et l'administration. Président de secteur : M. Claude LHERMUSIER Tél : <a href="tel:0237377054">02 37 37 70 54</a>
+			</section>
+			<section id="a43">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>>Services périscolaires></p>
+					<h1><a href="#a431">CANTINE</a></h1>
+					<h1><a href="#a432">ACCUEIL PERISCOLAIRES, ACCUEIL DE LOISIRS ET ESPACE JEUNES</a></h1>
+					<h1><a href="#a433">TRANSPORT SCOLAIRE</a></h1>
+					<h1><a href="#a434">POINT D'INFORMATION JEUNESSE</a></h1>
+			</section>
+			<section id="a431">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a43">Services périscolaires</a>></p>
+					<h1>CANTINE</h1>
+						L'inscription de vos enfants à la cantine pour l'école maternelle et l'école primaire, se fait en mairie.
+						L'inscription doit être renouvelée chaque année.
+						Renseignements, inscriptions et paiement :
+						Florence ROCTON <a href="tel:0237373724">02 37 37 37 24</a> .
+			</section>
+			<section id="a432">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a43">Services périscolaires</a>></p>
+					<h1>ACCUEIL PERISCOLAIRES, ACCUEIL DE LOISIRS ET ESPACE JEUNES</h1>
+						La Commune de Senonches et Communauté de Communes du Perche Senonchois ont confié la gestion de l'accueil périscolaire, de l'accueil de Loisirs et de l'Espace Jeunes à l'Association des PEP28.
+						Les tarifs sont calculés en fonction du quotient familial (si vous ne souhaitez pas le communiquer, le tarif le plus élevé sera appliqué).
+						<h2>Pour les enfants de 3 à 11 ans</h2>
+						En périodes scolaires
+						L'accueil périscolaire pour les écoles publiques de Senonches a lieu les lundis, mardis, jeudis et vendredis de 7h30 à 8h30 et de 16h30 à 18h30 à l'école élémentaire Jacques-Yves Cousteau. Accueil de loisirs les mercredis de 11h30 à 18h30 au complexe sportif, avenue de Badoulçau. Pour les élèves de maternelle qui empruntent le car pour se rendre de l'école à la garderie (et inversement), il est nécessaire de remplir une fiche d'inscription au transport scolaire (bureau du SIRPTS à la Mairie).
+						Pendant les vacances scolaires Accueil de loisirs de 7h30 à 18h30 aux vacances de la Toussaint, d'hiver, de printemps et de juillet au complexe sportif, avenue de Badouteau. Fermé en août et pendant les vacances de Noël.
+						<h2>Inscriptions/ renseignements</h2>
+						Coralie LEPINETTE, directrice : <a href="tel:0237377921">02 37 37 79 21</a> ou <a href="tel:0670940510">06 70 94 05 10</a>
+						Mail : aslhsenonches@gmail.fr
+						<h2>Pour les jeunes de 12 à 17 ans</h2>
+						L'espace Jeunes, situé en sortie de Senonches, sur la route de La Loupe est un lieu d'accueil, de détente, d'animations et d'échanges pour tous les jeunes de la Communauté de Communes du Perche Senonchois, âgés de 11 à 17 ans. Il dispose d'un billard, d'un babyfoot, d'une console Wii, d'une table de ping-pong, d'un terrain multi-sports, de nombreux jeux et d'une équipe d'animation sympathique et dynamique !
+						<h2>Accueil en périodes scolaires</h2>
+						Les mercredis de 13h30 à 18h30 Les samedis de 13h30 à 18h30 Les vendredis de 17h à 19b
+						Pendant les vacances scolaires Les jeunes adhérents peuvent accéder librement à l'Espace jeunes tous les jours des vacances de la Toussaint, d'hiver, de printemps, de juillet et pendant la dernière semaine d'août de 13h3Q à 18h30.
+						<h2>inscriptions/ renseignements</h2>
+						8 rue Albert Rémy
+						Anaïs DERANSY, directrice : <a href="tel:0237377516">02 37 37 75 16</a> ou <a href="tel:0628021604">06 28 02 16 04</a>
+						Mail : ejeune@wanadoo.fr
+			</section>
+			<section id="a433">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a43">Services périscolaires</a>></p>
+					<h1>TRANSPORT SCOLAIRE</h1>
+						Le SIRPTS (Syndicat Intercommunal de Regroupement Pédagogique et de Transport Scolaire) assure le transport des élèves des cantons de Senonches et la Ferté-Vidame vers les écoles du secteur, le collège de Senonches, les établissements de No-gent-le-Rotrou et le Château des Vaux. Le transport scolaire est financé à 80% par le Conseil Départemental, à 15% par les Communautés de Communes du Perche Senonchois et de l'Orée du Perche et à 5% par les familles. Les circuits, horaires, tarifs et feuilles d'inscriptions sont disponibles en mairie auprès du secrétariat du SIRPTS ou sur le site <a href="http://www.senonches.com">www.senonches.com</a><br>
+						Renseignements : jimmy DROUIN Tel : <a href="tel:0237373722">02 37 37 37 22</a> ou sirpts@ville-senonches.fr
+			</section>
+			<section id="a434">
+				<p><a href="#a4">Petite enfance - vie scolaire</a>><a href="#a43">Services périscolaires</a>></p>
+					<h1>POINT D'INFORMATION JEUNESSE</h1>
+						Situé dans les locaux de « l'espace jeunes », le PIJ est un lieu d'écoute, d'information et de documentation pour tous. Il est possible de trouver des informations sur la scolarité et les études, l'emploi, les formations, la santé, la vie quotidienne, les loisirs et la culture, les séjours linguistiques, le logement etc..<br>
+						Ouverture pendant les vacances scolaires : Le mardi, jeudi de 10h00 à 12h00 <br>
+						Ouverture en période scolaire : Le mardi, jeudi de 10h00 à 12h00 et le samedi de 10h30à12h30<br>
+						Attention, le samedi précédent les vacances scolaires, le Point Information jeunesse est fermé.
+						Contact : Responsable : Anaïs DERANSY Tél. <a href="tel:0237377516">02 37 37 75 16</a>
+						Espace Jeunes de la Communauté de Communes du Perche Senonchois 8 rue Albert Remy 28250 SENONCHES
+
+			</section>		
+			<section id="a5">
+				<p>Vie culturelle - tourisme></p>
+				<h1><a href="#a51">ECOLE DE MUSIQUE DU PERCHE SENONCHOIS</a></h1>
+				<h1><a href="#a52">MEDIATHEQUE DU PERCHE SENONCHOIS</a></h1>
+				<h1><a href="#a53">OFFICE DE TOURISME DU PERCHE SENONCHOIS</a></h1>
+				<h1><a href="#a54">CHÂTEAU DE SENONCHES FORÊT D'HISTOIRES...</a></h1>
+				<h1><a href="#a55">CINEMA L'AMBIANCE</a></h1>
+			</section>
+			<section id="a51">
+				<p><a href="#a5">Vie culturelle - tourisme</a>></p>
+					<h1>ECOLE DE MUSIQUE DU PERCHE SENONCHOIS</h1>
+						L'école de Musique de la Communauté de Communes du Perche Senonchois propose aux enfants à partir de 5 ans :<br>
+						- un éveil musical.<br>
+						- des cours d'instruments à vent, de violon et de percussion.<br>
+						- des cours de formation musicale (solfège).<br>
+						- une classe d'initiation à l'orchestre.<br>
+						Ces cours sont donnés toutes les semaines en raison d'un cours collectif de formation musicale d'une heure (obligatoire). Une demi heure de cours individuel pour les instruments. La classe d'orchestre à partir de la 3ème année d'instrument (1 h 30).
+						Les horaires sont fixés par le professeur en tenant compte des autres activités extra-scolaires des enfants. L'école organise régulièrement des "heures musicales" permettant aux jeunes musiciens de se produire en public et des semaines de musique thématiques.
+						Directeur : Hervé MOINARD 2 rue de Verdun Tel : <a href="tel:"></a>02 37 37 78 99 emcdc-senonches@orange.fr. Site : <a href="http://www.ecole-musique-senonches.fr">www.ecole-musique-senonches.fr</a>
+			</section>
+			<section id="a52">
+				<p><a href="#a5">Vie culturelle - tourisme</a>></p>
+					<h1>MEDIATHEQUE DU PERCHE SENONCHOIS</h1>
+						L'accès à la médiathèque, l'emprunt des ouvrages, revues, DVD et disques musicaux sont gratuits. Il est possible également de consulter internet librement.<br>
+						N'hésitez pas à venir retirer votre carte d'inscription pour profiter de tous ces services. 
+						<h2>Ouverture :</h2>
+						Mercredi : de 9h00 à 12h00 / de 14h00 à 18h00 <br>
+						Vendredi : de 10hOO à 12hÛ0 / de 16h00 à 19h00 <br>
+						Samedi : de 9h00 à 12h00 / de 14h00 à 18h00 <br>
+						Responsable : Florence ROCTON Tel : <a href="tel:0237373729">02.37.37.37.29</a> bibliotheque.senonches@wanadoo.fr <a href="http://www.frocton.wix.com/mediathequesenonches">www.frocton.wix.com/mediathequesenonches</a>
+			</section>
+			<section id="a53">
+				<p><a href="#a5">Vie culturelle - tourisme</a>></p>
+					<h1>OFFICE DE TOURISME DU PERCHE SENONCHOIS</h1>
+						Endroit incontournable pour être informé des événements sportifs, culturels et touristiques locaux. L'Office de Tourisme accompagne les visiteurs dans la conception de leur séjour dans le Perche Senonchois, organise des visites de ville, un marché nocturne en juillet, une randonnée nocturne en janvier, le forum des associations (tous les deux ans) et participe aux événements culturels locaux et nationaux.
+						L'Office de Tourisme est également à votre disposition pour communiquer sur vos événements. Contact :
+						Catherine COURIAS et l'équipe de bénévoles <a href="tel:0237378011">02 37 37 80 11</a>
+						info@senonchestourisme.com <a href="http://www.senonches-tourisme.com">www.senonches-tourisme.com</a>
+						2 rue Louis Peuret, déménagement en 2016 au Château de Senonches, rue du Château.
+						<h2>Services :</h2> 
+						boutique, Wifi Zone et consultation internet gratuite.
+						<h2>Ouverture :</h2> 
+						D'octobre jusqu'au déménagement au château en 2016 :
+						Le mardi, jeudi, vendredi et samedi de 10h à 12h30
+						et de 15h à 18h. Le mercredi de 10h à 12h30.
+						Fermé le lundi, le mercredi après-midi et le dimanche.
+						Ouverture de Pâques à la Toussaint 2016 :
+						Du mardi au dimanche de 10h à 12h30 et de 14h30à 18h.
+						Fermé le lundi.
+						Ouverture du 2 novembre au 24 décembre
+						et du 1er février à la veille du week-end de Pâques :
+						Le mercredi, jeudi, vendredi et samedi de 10h à 12h30 et de 15h à 17h30.
+						Fermé le lundi, le mardi et le dimanche
+						Fermeture annuelle du 25 décembre au 31 janvier.
+			</section>
+			<section id="a54">
+				<p><a href="#a5">Vie culturelle - tourisme</a>></p>
+					<h1>CHÂTEAU DE SENONCHES FORÊT D'HISTOIRES...</h1>
+						Récemment restauré, le château de Senonches prend « racine » et abrite désormais un espace muséographique moderne mettant à l'honneur son patrimoine naturel : la forêt. La forêt domaniale de Senonches est la plus grande forêt du département d'Eure et Loir et l'une des plus vastes de France. Le château de Senonches est situé au cœur de ce « poumon vert ». Au sein d'un parcours interactif et pédagogique adapté à tout public, vous êtes sensibilisé à l'écosystème forestier avant de découvrir toutes les richesses de la forêt senonchoise. Histoire de forêt mais également Forêt d'Histoires... En parcourant l'histoire de la forêt de Senonches, vous découvrez à la fois la vie de ces hommes et de ces femmes qui en vivaient et la faisaient vivre. Comprendre la forêt vous sensibilisera aux enjeux dans lesquels elle s'inscrit aujourd'hui et pour demain : ceux du développement durable. Petits et grands, cette visite ne vous laissera pas de bois !
+						Services : Animations pédagogiques, visites guidées, expositions temporaires, boutique.
+						<h2>Ouverture</h2>
+						De Pâques à la Toussaint :
+						Du mardi au dimanche de 10h à 12h30 et de 14h30à 18h.
+						Fermé le lundi.
+						Du 2 novembre à la veille du week-end de Pâques :
+						Fermé au public individuel. Ouvert pour les groupes sur réservation (excepté du 25 décembre au 31 janvier).
+						<h2>Renseignements et tarifs</h2>
+						Château de Senonches Rue du Château Tel: <a href="tel:0237378011">02 37 37 80 11</a> chateau@senonches.fr <a href="http://www.chateau-senonches.com">www.chateau-senonches.com</a>
+			</section>
+			<section id="a55">
+				<p><a href="#a5">Vie culturelle - tourisme</a>></p>
+					<h1>CINEMA L'AMBIANCE</h1>
+						Il est situé au 1 rue Flandres-Dunkerque, la salle est classée à l'inventaire supplémentaire des monuments historiques. Il dispose de 300 places. Cinéma labellisé «art et essai » avec un « film club » par semaine. L'Ambiance propose notamment une sortie nationale par semaine et deux avant-premières par an. <br>
+						Pour recevoir le programme toutes les semaines, vous pouvez envoyer un mail à : ambiance.senonches@wanadoo.fr <br>Tel : <a href="tel:0237377091">02 37 37 70 91</a>
+			</section>		
+			<section id="a6">
+				<p>Sports et loisirs></p>
+				<h1><a href="#a61">Equipements sportifs</a></h1>
+				<h1><a href="#a62">Associations sportives</a></h1>
+				<h1><a href="#a63">Autres loisirs</a></h1>
+			</section>		
+			<section id="a61">
+				<p><a href="#a6">Sports et loisirs</a>>Equipements sportifs></p>
+				<h1>COMPLEXE SPORTIF (Gymnase, Dojo)</h1>
+						Avenue de Badouleau. Tel <a href="tel:0237377761">02 37 37 77 61</a>
+				<h1>COURTS DE TENNIS</h1>
+						2 courts de pratique du tennis sont situés à côté du gymnase.
+						Les réservations se font auprès de l'Office de Tourisme au <a href="tel:0237378011">02 37 37 80 11</a> - Prix 5 € de l'heure
+				<h1>STADE DE FOOTBALL</h1>
+						Il dispose d'un terrain en herbe et d'un stabilisé.
+						Tel : <a href="tel:0237378948">02 37 37 89 48</a>
+				<h1>PARCOURS SPORTIF</h1>
+						Etabli autour du lac Arthur Rémy et du ruisseau St Cyr, le parcours de santé propose un chemin pié-tonnier pour les promeneurs et divers ateliers d'exercices physiques pour les plus sportifs sur une longueur de 1 150 mètres.
+				<h1>PISCINE</h1>
+						En plein air, avec aire de jeux.
+						Ouverte du 1er juillet au 31 août (sous réserve).
+						Tel : <a href="tel:0237379258">02 37 37 92 58</a>				
+				<h1>PAS DE TIR</h1>
+						Stade de football
+			</section>		
+			<section id="a62">
+				<p><a href="#a6">Sports et loisirs</a>>Associations sportives</p>
+					<h1>Badminton,</h1> 
+						responsable Emmanuel CISSÉ : Tel: <a href="tel:0626061275">06 26 06 12 75</a>
+					<h1>Handball,</h1> 
+						responsable Julien LECOMTE : Tel: <a href="tel:0642621147">06 42 62 11 47</a> pshb28@gmail.com
+					<h1>Tennis de Table,</h1> 
+						responsable Daniel RENONCET : Tel : <a href="tel:0650711202">06 50 71 12 02</a> /<a href="tel:0237378485">02 37 37 84 85</a> 
+					<h1>Tir à l'Arc - Les Dogs du Perche,</h1> 
+						responsable Lionel DUPERIS Tel <a href="tel:0237374822">02 37 37 48 22</a>
+					<h1>Tennis,</h1> 
+						responsable Pierre-Albert DUFRESNOY, contacter Lorenzo BACCHIERI au <a href="tel:0603120837">06 03 12 08 37</a>
+					<h1>Yoga,</h1> 
+						responsable Evelyne DUFRESNOY : Tel : <a href="tel:0237378224">02 37 37 82 24</a> / <a href="tel:0237378401">02 37 37 84 01</a>
+					<h1>Gymnastique Volontaire,</h1>
+						présidente Sylvie MANCEAU : Tel : <a href="tel:0237379256">02 37 37 92 56</a><br>
+						Secrétaire : Francine TABAREAU : Tel : <a href="tel:"></a>02 37 29 02 66
+					<h1>Pétanque,</h1> 
+						président Bernard NORMAND : Tel : <a href="tel:0237378733">02 37 37 87 33</a>
+					<h1>Cyclotourisme du Perche senonchois,</h1>
+						président Michel DUMONT : Tel : <a href="tel:0237377679">02 37 37 76 79</a> / <a href="tel:0237377640">02 37 37 76 40</a>
+					<h1>Football club du Perche senonchois,</h1>
+						président : Philipe RUI Tel : <a href="tel:0622303954">06 22 30 39 54</a>
+					<h1>Les Sabots du Perche senonchois,</h1>
+						présidente Annick RETOUT : Tel : <a href="tel:0237286176">02 37 28 61 76</a>
+						sabots.senonchois@laposte.net <a href="http://www.sabotssenonchois.jimdo.com">www.sabotssenonchois.jimdo.com</a>
+					<h1>Judo club du Perche senonchois</h1> 
+						Président Didier DUBILLE : Tel : <a href="tel:0237379416">02 37 37 94 16</a> <br>
+						Vice-Présidente et secrétaire : Patricia GILLET Tel : <a href="tel:"></a>02 37 37 86 73 judoclubduperchesenonchois@gmail.com
+					<h1>A.S.P.S Danse,</h1> 
+						présidente Valérie CHANTOISEAU : Tel : <a href="tel:0237379354">02 37 37 93 54</a>
+					<h1>Zumba,</h1> 
+						Marie-Anne Léger Tel: <a href="tel:0615151865">06 15 15 18 65</a> zumba.marieanne@gmail.com
+					<h1>Centre équestre</h1>
+						2, chemin de la Hutte, M. Philippe GROLIER : Tel : <a href="tel:0237377404">02 37 37 74 04</a>
+			</section>		
+			<section id="a63">
+				<p><a href="#a6">Sports et loisirs</a>>Autres loisirs></p>
+					<h1><a href="#a631">ACCÈS À LA FORÊT</a></h1>
+					<h1><a href="#a632">SENTIER DE L'ORÉE DU BOIS</a></h1>
+					<h1><a href="#a633">PÊCHE</a></h1>
+					<h1><a href="#a634">LE PERCHE À VÉLO</a></h1>
+					<h1><a href="#a635">PARCOURS DE SANTÉ</a></h1>
+					<h1><a href="#a636">RANDONNÉES PÉDESTRES, ÉQUESTRES ET VÉLOS</a></h1>
+					<h1><a href="#a637"></a></h1>
+					<h1><a href="#a638"></a></h1>
+			</section>		
+			<section id="a631">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>ACCÈS À LA FORÊT</h1>
+						Pendant la période de chasse (d'octobre à mars), l'accès à la forêt est limité pour les promeneurs. Ils peuvent y accéder uniquement les mardis, mercredis, jeudis, dimanches et samedis de chasse à courre. Les jours non autorisés sont les lundis, les vendredis et les samedis de chasse à tir.
+						Dès septembre, vous pouvez télécharger le nouveau calendrier d'accès à la forêt sur <a href="http://www.senonches-tourisme.com">www.senonches-tourisme.com</a>
+			</section>		
+			<section id="a632">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>SENTIER DE L'ORÉE DU BOIS</h1>
+						Un sentier de 600 m entièrement aménagé pour découvrir la forêt de Senonches avec nos sens. Labellisé tourisme et handicap Accès : Avenue du Général de Gaulle, entre le lotissement de l'Orée du Bois et la Maison forestière.
+			</section>		
+			<section id="a633">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>PÊCHE</h1>
+						Association Agréée pour la Pêche et la Protection du Milieu Aquatique (A.A.RP.M.A). Cartes de pêche en vente à l'Office de Tourisme, au magasin Proxi et à Intermarché.
+			</section>		
+			<section id="a634">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>LE PERCHE À VÉLO</h1>
+						Le chemin des louvetiers balisage orange n° 8 Ce circuit très facile au départ de Senonches traverse les villages de Laudigerie, Tardais, La Framboisière à la découverte du patrimoine bâti traditionnel et du patrimoine naturel avec la forêt. Autres circuits et liaisons possibles. Renseignements : Office de Tourisme du Perche Senonchois 02 37 37 8011 Départ : Rond de Battenberg.
+			</section>		
+			<section id="a635">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>PARCOURS DE SANTÉ</h1>
+						D'une longueur de 1 150 m
+						Entre le Lac Arthur Rémy et le ruisseau Saint Cyr.
+			</section>		
+			<section id="a636">
+				<p><a href="#a6">Sports et loisirs</a>><a href="#a63">Autres loisirs</a>></p>
+					<h1>RANDONNÉES PÉDESTRES, ÉQUESTRES ET VÉLOS</h1>
+						Au départ de Senonches et des communes du Perche Senonchois, des circuits sont accessibles gratuitement sur le site : <a href="http://www.123randonnee.fr">www.123randonnee.fr</a>.
+						Renseignements : Office de Tourisme du Perche Senonchois
+						Tél.: <a href="tel:0237378011">02 37 37 80 11</a>
+			</section>		
+			<section id="a7">
+				<p>Associations senonchoises></p>
+				<h1><a href="#a71">CARITATIF-ENTRAIDE</a></h1>
+				<h1><a href="#a72">NATURE</a></h1>
+				<h1><a href="#a73">CULTURE, ART, MUSIQUE</a></h1>
+				<h1><a href="#a74">ANCIENS</a></h1>
+				<h1><a href="#a75">FÊTES & DIVERS</a></h1>
+				<h1><a href="#a76">EGLISE</a></h1>
+			</section>		
+			<section id="a71">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>CARITATIF-ENTRAIDE</h1>
+						ADMR Association Locale d'Aide Familiale Rurale.
+						Jean-François CHAYLAC
+						Tel: <a href="tel:0237370619">02 37 37 06 19</a>
+						senonches@fede28@outlook.com
+						RESTOS DU COEUR
+						Chantai VANDER BAUVELD
+						Tel : <a href="tel:0647990387">06 47 99 03 87</a> / <a href="tel:0237378132">02 37 37 81 32</a> / <a href="tel:0631877323">06 3187 73 23</a>
+						Secours Catholique
+						Tel = <a href="tel:0642328115">06 42 32 81 15</a>
+						Secours Populaire
+						Lucienne ALEXANDRE Tél. : <a href="tel:0237377617">02 37 37 76 17</a>
+						Anne-Marie BARBOT Tel : <a href="tel:0237377687">02 37 37 76 87</a>
+						SEL (Système d'Echange Local)
+						Chantai Lelièvre
+						Tel : <a href="tel:0237377905">02 37 37 79 05</a> / <a href="tel:0661845438">06 61 84 54 38</a>
+						selsenonches@outlook.com
+						Récup p'tits bouchons
+						Christophe Charmois Tel : <a href="tel:0610252471">06 10 25 24 71</a>
+						recup.petits.bouchons@outlook.com
+			</section>		
+			<section id="a72">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>NATURE</h1>
+						Les Amis de la Forêt de Senonches, Jacky VIGNERON : Tel : <a href="tel:0237379725">02 37 37 97 25 </a>
+						Les jardiniers Senonchois, Jean-Luc PIOCHE : Tel : <a href="tel:0237377790">02 37 37 77 90</a>
+			</section>		
+			<section id="a73">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>CULTURE, ART, MUSIQUE</h1>
+						<h2>Association Culturelle,</h2>
+						Saïda LECLERC : Tel : <a href="tel:0237378727">02 37 37 87 27</a>
+						<h2>Groupe d'Histoire Locale,</h2>
+						Paul ALEXANDRE : Tel : <a href="tel:0237377617">02 37 37 76 17</a> contact@senonches-histoire.fr
+						<h2>Culture-découverte</h2>
+						Jean-Claude FARGAS Tél. : <a href="tel:0237378340">02 37 37 83 40</a> jc.fargas@sfr.fr
+						<h2>Club Photo,</h2> 
+						Marcel BOULIVET
+						Tel : <a href="tel:0233836310">02 33 83 63 10</a> / <a href="tel:0609834754">06 09 83 47 54</a> boulivet.marcel@orange.fr
+						<h2>Atelier vidéo</h2>
+						Jean-Pierre PICARD Tel : <a href="tel:0661572028">06 61 57 20 28</a>atelier-video@chapillou.fr 
+						<h2>Le petit théâtre de Senonches,</h2> 
+						Malcolm SCOTT : Tel : <a href="tel:0675065836">06 75 06 58 36</a>petit.theatre.de.senonches@gmail.fr 
+						<h2>Comité de jumelage Senonches/Battenberg,</h2> 
+						Jean-Claude FARGAS : Tel : <a href="tel:0237378340">02 37 37 83 40</a>jc.fargas@sfr.fr 
+						<h2>Association du Château,</h2> 
+						Laurence LAGANE : Tel : <a href="tel:0619310110">06 19 31 01 10</a> 
+						<h2>Harmonie de Senonches,</h2> 
+						Frédéric VAUX : Tel : <a href="tel:0237378455">02 37 37 84 55</a>
+						Alissa Duryee Tel : <a href="tel:0684225976">06 84 22 59 76</a> alissaduryee@gmail.com
+						<h2>Office de Tourisme du Perche Senonchois</h2>
+						Tél. : <a href="tel:0237378011">02 37 37 80 11</a>
+						<h2>Chorale Magnificat</h2>
+						Jeanne BEAUGENDRE Tel : <a href="tel:0237378338">02 37 37 83 38</a>
+						Association Artistique « Senonches Ville d'Art »,
+						Colette HAMELIN : Tel : <a href="tel:0678156527">06 78 15 65 27</a>
+						senonches_villedart@outlook.fr
+						<h2>Les Pléiades du Perche</h2>
+						Tel : <a href="tel:0232601245">02 32 60 12 45</a> / <a href="tel:0672680977">06 72 68 09 77</a>
+						les.pleiades.du.perche@miracsoft.fr
+						Daniel MAENHOUT : Tel : <a href="tel:0613333957">06 13 33 39 57</a>
+			</section>		
+			<section id="a74">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>ANCIENS</h1>
+						<h2>Amicale du 3e âge des Nonains :</h2>
+						Monique EGLOFF Tel : <a href="tel:0237377797">02 37 37 77 97</a> 
+						<h2>Amicale des Retraités Senonchois,</h2> 
+						Réjane FREMONT Tel : <a href="tel:0628753229">06 28 75 32 29</a>
+						<h2>Amicale d'E&L des anciens combattants d'Indochine, d'extrème-Orient et missions militaires extérieures</h2>
+						Daniel STANDAERT : Tel : <a href="tel:0237378017">02 37 37 80 17</a>
+						<h2>Les Anciens Combattants AFN,</h2> 
+						Jean-Pierre CONTOUR : Tel : <a href="tel:0237377182">02 37 37 71 82</a>
+			</section>		
+			<section id="a75">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>FÊTES & DIVERS</h1>
+						<h2>Comité des Fêtes de Senonches </h2>
+						Michel DONNY Tel : <a href="tel:0625006182">06.25.00.61.82</a> 
+						<h2>Comité des Fêtes de La Ville-aux-Nonains</h2> 
+						Janine DUTTON Tél. : <a href="tel:0237378423">02 37 37 84 23</a> / <a href="tel:0680738496">06 80 73 84 96</a>
+						<h2>Amicale des Sapeurs Pompiers :</h2>
+						Président Stéphane ROUSSET Tel : <a href="tel:0237375958">02 37 37 59 58</a>
+						<h2>Les Motards Tranquilles</h2>
+						Judith ASKIENAZY : Tel <a href="tel:0610734241">06 10 73 42 41</a>
+						les-motards-tranquilles@orange.fr
+						<h2>Confrérie du Cèpe et des fins délices de la forêt</h2>
+						de Senonches. Grand maître : Guy BAUER.
+						Tel : <a href="tel:0237379811">02 37 37 98 11</a> / <a href="tel:0607152985">06 07 15 29 85</a>
+						<h2>Jeunes Sapeurs Pompiers</h2>
+						Président : Bruno DESHAYES Tel : <a href="tel:0659240505">06 59 24 05 05</a>
+			</section>		
+			<section id="a76">
+				<p><a href="#a7">Associations senonchoises></a></p>
+					<h1>EGLISE</h1>
+						Paroisse de Saint Laumer du Perche<br>
+						Le calendrier des messes est affiché pour chaque trimestre à l'église Notre-Dame de Senonches.<br>
+						<h2>MAISON PAROISSIALE</h2>
+						2, rue Perier - Tél. /Fax : <a href="tel:0237377645">02 37 37 76 45</a> Mobile: <a href="tel:0762184717">07 62 18 47 17</a>
+						Permanences :<br>
+						•   Mercredi : 10h-12h<br>
+						•   Vendredi : 10h-12h<br>
+						•   Samedi : I0h-12h<br>
+						<h2>PRÊTRES</h2>
+						Père Jean Pierre OMVA EDOU (curé) Tel : <a href="tel:0640232443">06 40 23 24 43</a><br>
+						Père Jean Marie LUC (prêtre étudiant)<br>
+			</section>		
+			<section id="a8">
+				<p>Numéros d'urgence></p>
+				<h1>SAMU: 15</a></h1>
+				<h1><a href="tel:18">Pompiers : 18</a></h1>
+				<h1><a href="tel:17">Gendarmerie : 17 ou 02 37 37 36 85</a></h1>
+				<h1><a href="tel:0237515253">Hôpital de DREUX : tel : 02 37 51 52 53</a></h1>
+				<h1><a href="tel:0237303030">Hôpital de Chartres (Le Coudray) : tel : 02 37 30 30 30</a></h1>
+				<h1><a href="tel:0142341758">Centre des grands brûlés (Paris) : tel: 01 42 34 17 58</a></h1>
+				<h1><a href="tel:0140054848">Centre anti poison (Paris) : tel : 01 40 05 48 48</a></h1>
+				<h1><a href="tel:15">MÉDECIN DE GARDE: 15</a></h1>
+				<h1><a href="tel:3237">Pharmacie de garde : 3237</a></h1>
+				<h1><a href="tel:119">Enfance maltraitée : 119</a></h1>
+				<h1><a href="tel:116000">Enfants disparus : 116 000</a></h1>
+				<h1><a href="tel:3919">Info service violences conjugales : 39 19</a></h1>
+				<h1><a href="tel:0800231313">Drogues Info Service (appel gratuit depuis un poste fixe): 0800 23 13 13</a></h1>
+				<h1><a href="tel:0800840800">SIDA Info Service (appel gratuit depuis un poste fixe) : 0800 84 08 00</a></h1>
+				<h1><a href="tel:0810810821">Info Cancer Service : 0810 810 821</a></h1>
+				<h1><a href="tel:0800820528">Association Française de Protection et Assistance aux personnes âgées : 0800 820 528</a></h1>
+				<h1><a href="tel:115">Accueil sans abri : 115</a></h1>
+				<h1><a href="tel:0237216001">SPA Amilly : Tel : 02 37 21 60 01</a></h1>
+				<h1><a href="tel:0892705705">Perte ou vol de carte bancaire : Tel : 08 92 705 705</a></h1>
+				<h1><a href="tel:0810333028">Urgence dépannage électricité : 0810 333 028</a></h1>
+				<h1><a href="tel:0810282726">GDF sécurité, dépannage : 0810 28 27 26</a></h1>
+				<h1><a href="tel:0811902902">Veolia Eau Tel: 0811 902 902</a></h1>
+			</section>		
+			<section id="a9">
+				<p>Les professionnels de santé(<a href="#a91">détails</a>) </p>
+				<h1><a href="tel:0237379317">Ambulance senonchoise : 02.37.37.93.17</a></h1>
+				<h1><a href="#a92">Dentistes</a></h1>
+				<h1><a href="tel:0237320778">DIETETICIENNE : C.SAPIENZA : 02.37.32.07.78</a></h1>
+				<h1><a href="tel:0237378248">INFIRMIERS : 02.37.37.82.48</a></h1>
+				<h1><a href="tel:0237377534">KINESITHERAPEUTE : 02.37.37.75.34</a></h1>
+				<h1><a href="tel:0677786430">OSTÉOPATHE L.MAILLARD: 06.77.78.64.30</a></h1>
+				<h1><a href="tel:0674399798">PSYCHIATRE : F.Meunier : 06.74.39.97.98</a></h1>
+				<h1><a href="#a93">MÉDECINS GÉNÉRALISTES</a></h1>
+				<h1><a href="tel:0669995422">PÉDICURE PODOLOGUE : C.BUISSON : 06.69.99.54.22</a></h1>
+				<h1><a href="#a94">PHARMACIENS</a></h1>
+				<h1><a href="tel:0677055087">SOPHROLOGUE : D. : 06.77.05.50.87</a></h1>
+				<h1><a href="#a95">VÉTÉRINAIRES</a></h1>
+				<h1><a href="#a96">Autres informations et numéros utiles</a></h1>
+			</section>		
+			<section id="a91">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>Ambulance senonchoise</h1>
+						61 avenue de la Ferté Vidame, tel: <a href="tel:0237379317">02.37.37.93.17</a>
+					<h1>DIETETICIENNE Cécilia SAPIENZA</h1>
+						7 chemin de la Hutte, tel : <a href="tel:0237320778">02.37.32.07.78</a>
+					<h1>INFIRMIERS</h1>
+						Emilie BACQUET, Laurent BLOTTIN, Véronique jOAO, Lauriane KERVICHE-FAVRY, Alexandre MARIE
+						Maison médicale
+						7 chemin de la Hutte, tel : <a href="tel:0237378248">02.37.37.82.48</a>
+					<h1>KINESITHERAPEUTE</h1>
+						Marion PANTALACCI et Aline BOHIN,
+						Maison médicale
+						7 chemin de la Hutte, tel : <a href="tel:0237377534">02.37.37.75.34</a>
+					<h1>OSTÉOPATHE</h1>
+						Ludovic MAILLARD, Maison médicale
+						7 chemin de la Hutte, tel : <a href="tel:0677786430">06.77.78.64.30</a>
+					<h1>PSYCHIATRE</h1>
+						Dr Meunier Françoise,
+						7 chemin de la Hutte, tel : <a href="tel:0674399798">06.74.39.97.98</a>
+					<h1>PÉDICURE PODOLOGUE</h1>
+						Camille BUISSON Maison médicale
+						7 chemin de la Hutte, tél. : <a href="tel:0669995422">06.69.99.54.22</a>					
+					<h1>SOPHROLOGUE</h1>
+						MORIN GUERIN Delphine
+						7 chemin de la Hutte, tel : <a href="tel:0677055087">06.77.05.50.87</a>
+			</section>		
+			<section id="a92">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>DENTISTES</h1>
+						<h2>Dr Pierre ACKNIN,</h2> 
+						Maison médicale<br>
+						7 chemin de la Hutte, tel : <a href="tel:0237378580">02.37.37.85.80</a>
+						<h2>Dr Christian TILLET,</h2>
+						24 rue Louis Peuret, tel : <a href="tel:0237377350">02.37.37.73.50</a>
+			</section>		
+			<section id="a93">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>MÉDECINS GÉNÉRALISTES</h1>
+						<h2>Dr Jean-Sébastien GROSS,</h2>
+						8  place des Halles, tel : <a href="tel:0237379439">02.37.37.94.39</a>
+						<h2>Dr Frédéric LECLERC,</h2> 
+						Maison médicale<br>
+						7 chemin de la Hutte, tel : <a href="tel:0237377622">02.37.37.76.22</a>
+						<h2>Dr Daniel GRAILLOT,</h2> 
+						Maison médicale<br>
+						7 chemin de la Hutte tel: <a href="tel:0237379189">02.37.37.91.89</a>
+						<h2>Dr Roger REMBLAIN,</h2>
+						3 rue du Four Banal, tel : <a href="tel:0237379397">02.37.37.93.97</a>
+
+			</section>		
+			<section id="a94">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>PHARMACIENS</h1>
+						<h2>Pharmacie du Château</h2>
+						5 place des Halles<br> 
+						Dr Christine NICOLAS et Dr Xavier NICOLAS<br>
+						tel : <a href="tel:0237377343">02.37.37.73.43</a> / Fax : 02.37.37.79.74 
+						<h2>Pharmacie des Marronniers</h2>
+						9 rue Aristide Briand<br>
+						Dr Véronique DORSIMONT et Dr Evelyne GALLET<br>
+						tel : <a href="tel:0237377841">02.37.37.78.41</a> / Fax : 02.37.37.97.40
+			</section>		
+			<section id="a95">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>VÉTÉRINAIRES</h1>
+						Cabinet du Dr SABBAGH,<br>
+						59 route de La Ferté Vidame,<br>
+						tel : <a href="tel:0237378641">02.37.37.86.41</a><br>
+						Dr Radwan ELJARAKI, 10 rue des Nonains,<br>
+						La Ville aux Nonains,<br>
+						tel : <a href="tel:0237379255">02.37.37.92.55</a> / <a href="tel:0634967453">06.34.96.74.53</a>
+			</section>		
+			<section id="a96">
+				<p>Détails des professionnels de santé(<a href="#a9">retour</a>) </p>
+					<h1>Informations et numéros utiles</h1>
+						<h2>CAISSE PRIMAIRE D'ASSURANCE MALADIE</h2>
+						Permanence à Senonches sur RDV au <a href="tel:3646">3646</a>
+						<h2>PERMANENCE ARCCO CICAS (retraite complémentaire)</h2>
+						2e et 4e lundi du mois sur RDV au <a href="tel:0820200189">0820 200 189</a>
+						<h2>PERMANENCE CARSAT (Caisse d'Assurance Retraite et de la Sécurité au Travail)</h2>
+						Le 3e mercredi du mois de 9h à 12h et de 13h à 16h sur RDV au 3960
+						<h2>PERMANENCE ÉLUS À LA MAIRIE DE SENONCHES</h2>
+						Tous les vendredis de 10h30 à 12h30
+						<h2>PERMANENCE,MISSION LOCALE</h2>
+						1er- 2e et 3e jeudi du mois de 9h à 12h sur RDV au <a href="tel:0237385767">02 37 38 57 67</a>
+						<h2>PERMANENCE MSA (Mutuelle Agricole)</h2>
+						Le 2e jeudi du mois de 14h à 16h sur RDV au <a href="tel:0237304571">02 37 30 45 71</a>, locaux du relais emploi à Senonches.
+						Permanence hebdomadaire chaque mardi (9h à 12h et de 13h30 à 16h) à DREUX, 51 rue Parisis - Tel : <a href="tel:0237420363">02 37 42 03 63</a>
+						<h2>PERMANENCE SENIOR INFO SERVICE</h2>
+						sur RDV au <a href="tel:0237642550">02 37 64 25 50</a> ou au <a href="tel:0237236028">02 37 23 60 28</a>
+			</section>
+
+</div>
+</body>
+</html>
+

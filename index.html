@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta NAME="description" CONTENT=" Pages perso de Paul Crayssac">
+	<meta NAME="keywords" CONTENT="Paul, Crayssac, page personnelle"> 
+	<link rel="shortcut icon" href="img/ico.ico">
+	<!-- Compiled and minified CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Compiled and minified JavaScript -->
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title></title>
+</head>
+<body>
+  <!-- Icone de tête -->
+  <div class="bbleu2 bleu2">
+    <div class="chip">
+      <a href="./index.html"><img src="./img/ico-home.png" alt="Informatique">
+      Accueil</a>
+    </div>
+    <div class="chip">
+      <a href="./informatique.html"><img src="./img/ico-computer.png" alt="Informatique">
+      Informatique</a>
+    </div>
+    <div class="chip">
+      <a href="./calligraphie.html"><img src="./img/ico-calli.png" alt="Calligraphie">
+      Calligraphie</a>
+    </div>
+    <div class="chip">
+      <a href="./nature.html"><img src="./img/ico-nature.png" alt="Nature">
+      Nature</a>
+    </div>
+    <div class="chip">
+      <a href="./aboutme.html"><img src="./img/ico-about-me.png" alt="Qui suis-je">
+      Qui suis-je</a>
+    </div>
+  </div>
+  <!-- Fin icone de tête -->
+	<h1 class="bbleu3">Bienvenue sur ce mini-site</h1>
+	<p>
+	J'ai crée se mini site en 2006 lors de ma première reconversion professionnelle. Mes connaissances en développement web ont évolué. Malgré les limites de l'hébergement, j'ai voulu le rajeunir. J'ai utilisé le framework Materialze pour lui donner du style et du dynamisme. 	
+	</p>
+	<p>
+	Je vous invite à découvir le contenu de ces quelques pages...  	
+	</p>
+	 <div class="slider">
+	    <ul class="slides">
+	      <li>
+	        <img src="./img/dev.jpg"> <!-- random image -->
+	        <div class="caption center-align">
+	          <h3>Développement Web et mobile.</h3>
+	          <h5 class="light black-text text-lighten-3">Elève de La Wild Code School de La Loupe</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="./img/calligraphe.jpg"> <!-- random image -->
+	        <div class="caption left-align">
+	          <h3>Je partique la belle écriture.</h3>
+	          <h5 class="light black-text text-lighten-3">Calligraphe depuis plus de 10 ans.</h5>
+	        </div>
+	      </li>
+	      <li>
+	        <img src="./img/perche.jpg"> <!-- random image -->
+	        <div class="caption right-align">
+	          <h3>Passionné de nature.</h3>
+	          <h5 class="light black-text text-lighten-3">Je suis à la recherche de ses multiples ressources.</h5>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+      
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script type="text/javascript">
+	// init slider
+	$(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+</script>
+</body>
+</html>

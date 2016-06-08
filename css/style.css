@@ -1,0 +1,68 @@
+.bleu1{
+	color:#120DFF;
+}
+/* Définition charte couleur */
+.bleu2{
+	color:#257AE8;
+}
+.bleu3{
+	color:#36E9FF;
+}
+.vert1{
+	color:#5BE8B4;
+}
+.vert2{
+	color:#2DFF4B;
+}
+.bbleu1{
+	background-color:#120DFF;
+}
+.bbleu2{
+	background-color:#257AE8;
+}
+.bbleu3{
+	background-color:#36E9FF;
+}
+.bvert1{
+	background-color:#5BE8B4;
+}
+.bvert2{
+	background-color:#2DFF4B;
+}
+
+/* Style menu iframe Head.html */
+#menu{
+	width: 100%;
+}
+.menu-ico{
+	margin: 5px; 
+}
+/* Style page */
+body{
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+.slider{
+	margin:0 auto;
+	width: 400px;
+	height: 300px;
+	border: 3px solid #5BE8B4;
+}
+
+h1{
+	font-size: 3em;
+}
+h2{
+	font-size: 2.2em;
+}
+h3{
+	font-size: 1.7em;
+}
+h5{
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+.slides h3{
+	color: black;
+}
