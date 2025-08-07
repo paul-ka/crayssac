@@ -1,0 +1,56 @@
+{
+    "titre":"mon titre",
+    "activite":[
+        {
+            "titre":"Activité texte",
+            "type":"texte",
+            "contenu":"# Titre1\n## Titre2\n### Titre3\nContenu avec un [lien](https://www.google.com)... si je ne ma suis pas trompé.",
+            "debut": "1/8/2025"
+        },
+        {
+            "titre":"Activité URL",
+            "type":"url",
+            "contenu":"https://www.google.com",
+            "debut": "1/8/2025"
+        },
+        {
+            "titre":"Activité QCU",
+            "type":"QCU",
+            "contenu":"1+1=2",
+            "choix":["vrai","faux"],
+            "ok": "vrai",
+            "feedback":"1+1 vallent bien 2",
+            "debut": "1/8/2025"
+        },
+        {
+            "titre":"Activité QCM",
+            "type":"QCM",
+            "contenu":"Quelle couleur est dans l'arc en ciel",
+            "choix":["rouge","vert","bleu","marron","noir"],
+            "ok": ["rouge","vert","bleu"],
+            "feedback":"rouge, vert et bleu sont bien dan l'arc en ciel mais pas le marron et le noir.",
+            "debut": "1/8/2025"
+        },
+        {
+            "titre":"Activité texte à trou",
+            "type":"trou",
+            "contenu":"Javascript est un [] utilisable côté server et côté client.",
+            "ok": "langage",
+            "feedback":"Javascript est un langage.",
+            "debut": "1/8/2025"
+        },
+        {
+            "titre":"Activité vidéo",
+            "type":"video",
+            "contenu":"exemple.mp4",
+            "choix":[{"nom":"début",
+                    "position":"0"},
+                    {"nom":"tag 1",
+                    "position":"3"},
+                    {"nom":"tag 2",
+                    "position":"8"}],
+            "debut": "1/8/2025"
+        }
+
+    ]
+}

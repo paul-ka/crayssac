@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1></h1>
+        </div >
+        <div class="cards-grid" id="page">
+            <!-- <div class="card">
 
+            </div> -->
+
+        </div>
+    </div>
+    
+</body>
+<script>
+
+    let page = document.getElementById("page");
+    function feedbackqcu(action, bon, fback){
+        console.dir(action.parentElement);
+        if(action.innerHTML == bon){
+            action.style="background-color:green;";
+            action.parentElement.lastChild.innerHTML = "En effet : " + fback;
+        } else {
+            action.style="background-color:red;";
+            action.parentElement.lastChild.innerHTML = "Erreur : " + fback;
+        };
+        action.parentElement.lastChild.style="display:block;";  //rend visible le feedback
+    }
+
+    function feedbackqcm(action, bon, fback){
+        let ok = true;
+        // console.dir(action.parentElement);
+        // console.dir(bon);
+        action.parentElement.childNodes.forEach(balise => {
+            if (balise.tagName == "LABEL"){
+                // console.log(balise.innerText);
+                // console.log(bon.indexOf(balise.innerText));
+                if((bon.indexOf(balise.innerText)<0) == (balise.children[0].checked)){
+                    ok = false;
+                    
+                }
+            }
+        })
+        if(ok){
+            action.style="background-color:green;";
+            action.parentElement.lastChild.innerHTML = "En effet : " + fback;
+        } else {
+            action.style="background-color:red;";
+            action.parentElement.lastChild.innerHTML = "Erreur : " + fback;
+        };
+        action.parentElement.lastChild.style="display:block;";  //rend visible le feedback
+    }
+
+    function feedbacktrou(action, bon,fback){
+        // console.log(action.parentElement.firstChild.children[0].value);
+        // console.log(bon);
+        if(action.parentElement.firstChild.children[0].value.toUpperCase() == bon.toUpperCase()){
+            action.style="background-color:green;";
+            action.parentElement.lastChild.innerHTML = "En effet : " + fback;
+        } else {
+            action.style="background-color:red;";
+            action.parentElement.lastChild.innerHTML = "Erreur : " + fback;
+        };
+        action.parentElement.lastChild.style="display:block;";  //rend visible le feedback
+    }
+    function videotag(action, position){
+        action.parentElement.children[1].currentTime = position;
+    }
+// Retourne true si le début est antérieur à la date du jour
+    function dateOk(date){
+        let maintenant = new Date();
+        let d = date.split('/');
+        let debut = new Date(d[2], d[1]-1 , d[0]); //le mois est indexé à partir de 0
+        return (maintenant > debut)?true:false;
+    }
+
+// Activité texte au format Markdown
+// =================================
+    function cree_texte(act){
+        if(dateOk(act.debut)){
+            // décodage Markdown
+            let lignes = act.contenu.split("\n");  //découpe les lignes
+            act.contenu = "";  //initialise le contenu
+            lignes.forEach(el => {
+                if(el.substring(0,3)=="###"){ //recherche les titres niveau 3
+                    el = el.replaceAll("###","");  //supprime les #
+                    el = "<h4>" + el + "</h4>"
+                }
+                if(el.substring(0,2)=="##"){ //recherche les titres niveau 2
+                    el = el.replaceAll("##","");  //supprime les #
+                    el = "<h3>" + el + "</h3>"
+                }
+                if(el.substring(0,1)=="#"){ //recherche les titres niveau 1
+                    el = el.replaceAll("#","");  //supprime les #
+                    el = "<h2>" + el + "</h2>"
+                }
+                let debutLigne = el.indexOf("[");   //recherche d'un lien
+                if(debutLigne!=-1){
+                    let boutChaine = el.split(/[\[|\]\(|\)]/gi);
+                    el = boutChaine[0] + "<a href='" + boutChaine[3] + "' target='_blank'>"+boutChaine[1]+"</a>"+boutChaine[4];
+                }
+                act.contenu += el +"<br>";
+            });
+            return `
+<details>
+    <summary>${act.titre}</summary>
+    <div>${act.contenu}</div>
+</details>
+`;
+        } else {return '';};
+    }
+// activité lien site internet
+// ===========================
+    function cree_url(act){
+        if(dateOk(act.debut)){
+            return `
+<details>
+    <summary>${act.titre}</summary>
+    <div><a href='${act.contenu}' target='_blank'>Ouvrir le lien</a></div>
+</details>
+`;
+        } else {return '';};
+    }
+// Affiche une image
+// =================
+    function cree_image(act){
+        if(dateOk(act.debut)){
+            return `
+<details>
+    <summary>${act.titre}</summary>
+    <div><img src='${act.contenu}'></div>
+</details>
+`;
+        } else {return '';};
+    }
+// activité choix multiple
+// =======================
+    function cree_qcm(act, id){
+        if(dateOk(act.debut)){
+            let boutons = "";
+            act.choix.forEach(bouton => {
+                boutons += `<label><input type="checkbox" name="${bouton}" id="">${bouton}</label>`;
+            });
+            let activ = `<details>
+        <summary>${act.titre}</summary>
+        <div><h3>${act.contenu}</h3>
+        ${boutons}<br>
+        <button onclick="feedbackqcm(this,'${act.ok}','${act.feedback.replaceAll('\'','\\\'')}');">Valider</button><br>
+        <p style="display:none;">${act.feedback}</p></div>
+    </details>
+    `;
+            return activ;
+        } else {return '';};
+    }
+// activité choix unique
+// =====================
+    function cree_qcu(act, id){
+        if(dateOk(act.debut)){
+            let boutons = "";
+            act.choix.forEach(bouton => {
+                boutons += `<button onclick="feedbackqcu(this,'${act.ok}','${act.feedback.replaceAll('\'','\\\'')}');">${bouton}</button>`;
+            });
+            let activ = `<details>
+    <summary>${act.titre}</summary>
+    <div><h3>${act.contenu}</h3>
+    ${boutons}<br>
+    <p style="display:none;">${act.feedback}</p></div>
+    </details>
+    `;
+            return activ;
+        } else {return '';};
+    }
+// activité texte avec 1 trou
+// ==========================
+    function cree_trou(act, id){
+        if(dateOk(act.debut)){
+            let boutons = "";
+            let question = act.contenu.replace(`[]`,`<input type="text">`);
+            console.log(question);
+            let activ = `<details>
+    <summary>${act.titre}</summary>
+    <div><h3>${question}</h3>
+    <button onclick="feedbacktrou(this,'${act.ok}','${act.feedback.replaceAll('\'','\\\'')}');">Valider</button><br>
+    <p style="display:none;">${act.feedback}</p></div>
+    </details>
+    `;
+            return activ;
+        } else {return '';};
+    }
+// Activité vidéo avec chapitrage
+// ==============================
+    function cree_video(act, id){
+        if(dateOk(act.debut)){
+            let boutons = "";
+            act.choix.forEach(bouton => {
+                console.dir(bouton);
+                boutons += `<button onclick="videotag(this,'${bouton.position}');">${bouton.nom}</button>`;
+            });
+            let activ = `<details>
+    <summary>${act.titre}</summary>
+    <video controls  width="300"><source src="${act.contenu}" type="video/mp4" /></video><br>
+    ${boutons}<br>
+    </details>
+    `;
+            return activ;
+        } else {return '';};
+    };
+
+    let bdd = './cours.json';
+    //pour extraire le json dans http://.../index.html?base=cours.json
+    let lignecde = document.URL;
+    let param = lignecde.split("?");
+    if(param&&param[1]){
+        let base = param[1].split("=");
+        bdd=base[1];
+    }
+    fetch("./"+ bdd, { method: 'GET'})
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+        // const jsonData = JSON.stringify(json);
+        // const blob = new Blob([jsonData], { type: 'application/json' });
+        // const url = URL.createObjectURL(blob);
+        const titre = document.querySelector("h1");
+        titre.innerHTML = json.titre;
+        let idact = 0;
+        for(const act of json.activite) {
+            switch (act.type.toUpperCase()) {
+            case "TEXTE":
+                page.innerHTML+=cree_texte(act);
+                break;
+            case "URL":
+                page.innerHTML+=cree_url(act);
+                break;
+            case "IMAGE":
+                page.innerHTML+=cree_image(act);
+                break;
+            case "QCU":
+                page.innerHTML+=cree_qcu(act, idact);
+                break;
+           case "QCM":
+                page.innerHTML+=cree_qcm(act, idact);
+                break;
+           case "TROU":
+                page.innerHTML+=cree_trou(act, idact);
+                break;
+           case "VIDEO":
+                page.innerHTML+=cree_video(act, idact);
+                break;
+
+            }
+            idact++;
+        };
+        // page.innerHTML+=`<a href=${url}>Télécharge</a><br>`;
+    });
+
+</script>
+</html>

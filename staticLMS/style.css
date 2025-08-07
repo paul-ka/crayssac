@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+details {
+    margin: 10px 0;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none; /* Supprime l'icône par défaut */
+    position: relative; /* Nécessaire pour positionner l'icône */
+    padding-right: 5%; /* Espace pour l'icône */
+    padding: 10px 5% 10px 10px;
+    border: solid white;
+    border-radius : 15px;
+    background-color: #F0F0FC;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+summary::before {
+    content: url('./chevron.svg'); /* Icône d'ouverture */
+    position: absolute;
+    left: 95%;
+    transition: transform 0.3s; /* Animation pour la rotation */
+}
+
+details[open] summary::before {
+    transform: rotate(90deg); /* Rotation de l'icône quand ouvert */
+    content:  url('./chevron.svg'); /* Icône de fermeture */
+}
+details[open] summary {
+    background-color: white;
+}
+details[open] > div {
+    margin-left:20px;
+    color : white;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn.active {
+    background: rgba(255,255,255,0.4);
+    border-color: rgba(255,255,255,0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #F0F0FC;
+}
+
+button {
+    margin: 2px;
+    padding: 5px 20px;
+    border-radius : 5px;
+}
+
+label {
+    font-family: system-ui, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+@media  (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }            
+}
+
